@@ -14,11 +14,12 @@ export default function Home() {
         <meta name="description" content="Computer scientist Portfolio"/>
       </Head>
 
-      <main className="bg-gray-700">
-        <section className="min-h-screen">
-        <nav className="flex flex-wrap justify-between bg-slate-600 px-10 w-full py-8 cursor-pointer">
-              <ul className='flex flex-wrap items-center'>
-                <Link href="/"><AiFillCloud className='text-4xl text-teal-400 transition duration-200 ease-in-out hover:text-emerald-400 transform hover:scale-110'/></Link>
+      <main className='bg-gray-700 min-h-screen'>
+        
+        <section className='mb-8'>
+          <nav className="flex flex-wrap justify-between bg-slate-600 px-10 w-full py-8 ">
+              <ul className='flex flex-wrap items-center cursor-pointer'>
+                <Link href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><AiFillCloud className='text-4xl text-teal-400 transition duration-200 ease-in-out hover:text-emerald-400 transform hover:scale-110'/></Link>
                 <li className='ml-10 transition duration-200 ease-in-out text-white hover:text-emerald-400 transform hover:scale-110'>
                   <Link href="/">Home</Link>
                 </li>
@@ -41,10 +42,11 @@ export default function Home() {
                 </li>
               </ul>
           </nav>
-          <div>
+        </section>
+
+        <div>
             <Image src={donut} width={300} className='bg-blue-400 rounded-3xl border bg-opacity-50' alt={'donut'}></Image>
           </div>
-        </section>
       </main>
       
     </div>

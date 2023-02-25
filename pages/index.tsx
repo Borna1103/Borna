@@ -15,7 +15,7 @@ export default function Home() {
 
       <main className='bg-gray-700 min-h-screen'>
         
-        <section className='mb-10'>
+        <section className='mb-8'>
           <nav className="flex flex-wrap justify-between bg-slate-600 px-10 w-full py-8 ">
               <ul className='flex flex-wrap items-center cursor-pointer'>
                 <Link href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><AiFillCloud className='text-4xl text-teal-400 transition duration-200 ease-in-out hover:text-emerald-400 transform hover:scale-110'/></Link>
@@ -60,7 +60,7 @@ export default function Home() {
 
         <div className='flex flex-wrap justify-center'>
           <div className='fixed bottom-0'>
-            <Image src={Icon} width={300} alt={'icon'}></Image>
+            <Image src={Icon} width={200} alt={'icon'}></Image>
           </div>
         </div>
         
