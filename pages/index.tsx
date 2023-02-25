@@ -18,7 +18,7 @@ export default function Home() {
         <section className='min-h-screen'>
           <nav className="flex flex-wrap justify-between bg-slate-600 px-10 w-full py-8 cursor-pointer">
               <ul className='flex flex-wrap items-center'>
-                <Link href="/"><AiFillCloud className='text-4xl text-teal-400 transition duration-200 ease-in-out hover:text-emerald-400 transform hover:scale-110'/></Link>
+                <Link href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><AiFillCloud className='text-4xl text-teal-400 transition duration-200 ease-in-out hover:text-emerald-400 transform hover:scale-110'/></Link>
                 <li className='ml-10 transition duration-200 ease-in-out text-white hover:text-emerald-400 transform hover:scale-110'>
                   <Link href="/">Home</Link>
                 </li>
