@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import{AiFillLinkedin, AiFillGithub, AiFillCloud} from 'react-icons/ai'
-import Icon from '/images/icon.png';
-import Image from 'next/image'
+
 
 export default function Home() {
   return (
@@ -12,8 +11,8 @@ export default function Home() {
         <meta name="description" content="Computer scientist Portfolio"/>
       </Head>
 
-      <main className='bg-gray-700'>
-        
+      <main className="bg-gray-700">
+
         <section className='min-h-screen'>
           <nav className="flex flex-wrap justify-between bg-slate-600 px-10 w-full py-8 cursor-pointer">
               <ul className='flex flex-wrap items-center'>
@@ -42,31 +41,45 @@ export default function Home() {
           </nav>
         </section>
 
-        <section className='flex flex-wrap px-10 py-10 absolute top-20'>
-          <div className='bg-purple-700 rounded-full w-72 h-72 top-40 blur-lg'></div>
-          <div className='bg-purple-600 rounded-full -right-4 w-72 h-72 blur-lg ml-20 py-5'></div>
-        </section>
-
-       
-        <section className='absolute top-32'>
-          <div className='py-4 text-center font-bold text-teal-400 mb-10'>
-            <h1 className='text-7xl'>Developed by</h1>
-            
-            <h1 className='text-8xl py-2'>Borna Hemmaty</h1>
-          </div>
-            
-          <div className='text-center box-content w-1/2'>
-            <p className=' text-xl leading-8 font-medium text-white text-opacity-80 mb-72'>
-               I am a student at the University of California San Diego learning to be a better developer as a Math 
-               - Computer Science Major. Fun fact about me, I love getting the crispy chicken combo at Tapioca Express on campus.
-            </p>
-          </div>
-
-          <div className='flex flex-wrap px-10 justify-center'>
-            <Image src={Icon} width={300} alt={'icon'}></Image>
-          </div>
-        </section>
         
+
+        <section className='absolute top-20'>
+          <div className='p-10'>
+            
+            <div className='flex flex-wrap items-center px-10 py-5 text-4xl text-teal-400 font-semibold'>
+              <h1>
+                Programming Languages 
+              </h1>
+              <h1 className='ml-32'>
+                Software
+              </h1>
+              <h1 className='ml-32'>
+                OS
+              </h1>
+            </div>
+
+
+            <h1 className='px-10 py-2 text-xl text-teal-400 font-semibold'>
+              Java
+            </h1>
+            <h1 className='px-10 py-2 text-xl text-teal-400 font-semibold'>
+              C
+            </h1>
+            <h1 className='px-10 py-2 text-xl text-teal-400 font-semibold'>
+              C++
+            </h1>
+            <h1 className='px-10 py-2 text-xl text-teal-400 font-semibold'>
+              Python
+            </h1>
+            <h1 className='px-10 py-2 text-xl text-teal-400 font-semibold'>
+              Assembly
+            </h1>
+            <h1 className='px-10 py-2 text-xl text-teal-400 font-semibold'>
+              LaTeX
+            </h1>
+          </div>
+        </section>
+
       </main>
       
     </div>
