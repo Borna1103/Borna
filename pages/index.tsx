@@ -13,11 +13,11 @@ export default function Home() {
         <meta name="description" content="Computer scientist Portfolio"/>
       </Head>
 
-      <main className='bg-gray-700'>
+      <main className='bg-gray-700 min-h-screen'>
         
-        <section className='min-h-screen'>
-          <nav className="flex flex-wrap justify-between bg-slate-600 px-10 w-full py-8 cursor-pointer">
-              <ul className='flex flex-wrap items-center'>
+        <section>
+          <nav className="flex flex-wrap justify-between bg-slate-600 px-10 w-full py-8 ">
+              <ul className='flex flex-wrap items-center cursor-pointer'>
                 <Link href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><AiFillCloud className='text-4xl text-teal-400 transition duration-200 ease-in-out hover:text-emerald-400 transform hover:scale-110'/></Link>
                 <li className='ml-10 transition duration-200 ease-in-out text-white hover:text-emerald-400 transform hover:scale-110'>
                   <Link href="/">Home</Link>
@@ -43,30 +43,31 @@ export default function Home() {
           </nav>
         </section>
 
-        <section className='flex flex-wrap px-10 py-10 absolute top-20'>
-          <div className='bg-purple-700 rounded-full w-72 h-72 top-40 blur-lg'></div>
-          <div className='bg-purple-600 rounded-full -right-4 w-72 h-72 blur-lg ml-20 py-5'></div>
-        </section>
-
-       
-        <section className='absolute top-32'>
+        <body>
           <div className='py-4 text-center font-bold text-teal-400 mb-10'>
             <h1 className='text-7xl'>Developed by</h1>
             
             <h1 className='text-8xl py-2'>Borna Hemmaty</h1>
           </div>
             
-          <div className='text-center box-content w-1/2'>
-            <p className=' text-xl leading-8 font-medium text-white text-opacity-80 mb-72'>
+          <div className='fixed text-center'>
+            <p className=' text-xl leading-8 font-medium text-white '>
                I am a student at the University of California San Diego learning to be a better developer as a Math 
                - Computer Science Major. Fun fact about me, I love getting the crispy chicken combo at Tapioca Express on campus.
             </p>
           </div>
+        </body>
 
-          <div className='flex flex-wrap px-10 justify-center'>
+        <div className='flex flex-wrap justify-center'>
+          <div className='fixed bottom-0'>
             <Image src={Icon} width={300} alt={'icon'}></Image>
           </div>
-        </section>
+        </div>
+        
+
+        
+
+       
         
       </main>
       
