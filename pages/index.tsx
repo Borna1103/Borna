@@ -43,11 +43,11 @@ export default function Home() {
           </nav>
         </section>
 
-        <body>
+        <section>
           <div className='py-4 text-center font-bold text-teal-400 mb-10'>
-            <h1 className='text-7xl'>Developed by</h1>
-            
-            <h1 className='text-8xl py-2'>Borna Hemmaty</h1>
+            <h1 className='text-8xl'>Borna Hemmaty</h1>
+
+            <h1 className='text-5xl py-6 font-light'>Computer Scientist - UnderGrad Student</h1>
           </div>
             
           <div className='fixed text-center'>
@@ -56,10 +56,10 @@ export default function Home() {
                - Computer Science Major. Fun fact about me, I love getting the crispy chicken combo at Tapioca Express on campus.
             </p>
           </div>
-        </body>
+        </section>
 
         <div className='flex flex-wrap justify-center'>
-          <div className='fixed bottom-0'>
+          <div className='fixed bottom-4'>
             <Image src={Icon} width={200} alt={'icon'}></Image>
           </div>
         </div>

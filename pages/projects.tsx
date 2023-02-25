@@ -47,13 +47,15 @@ export default function Home() {
         <section>
 
           <div className='text-white ml-10'>
-            <h1 className='text-xl mb-8'>
+            <h1 className='text-3xl font-bold mb-8'>
               3D CAD Modeling, Donut - Software: Blender
             </h1>
-            <p className='ml-4'>
-              This project
-              </p>
+            <p className='ml-4 text-xl box-border w-1/3'>
+              This project is a learning experience on the 3D CAD modeling software called Blender. 
+              To help with my 3D modeling skills and explore the entent of Blender I modeled a donut onto blender with various techniques I learnt.
+            </p>
           </div>
+
           <div className='fixed right-0'>
             <Image src={donut} width={300} className='bg-blue-400 rounded-3xl border bg-opacity-50' alt={'donut'}></Image>
           </div>
