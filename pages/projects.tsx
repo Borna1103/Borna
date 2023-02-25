@@ -44,9 +44,20 @@ export default function Home() {
           </nav>
         </section>
 
-        <div>
+        <section>
+
+          <div className='text-white ml-10'>
+            <h1 className='text-xl mb-8'>
+              3D CAD Modeling, Donut - Software: Blender
+            </h1>
+            <p className='ml-4'>
+              This project
+              </p>
+          </div>
+          <div className='fixed right-0'>
             <Image src={donut} width={300} className='bg-blue-400 rounded-3xl border bg-opacity-50' alt={'donut'}></Image>
           </div>
+        </section>
       </main>
       
     </div>
