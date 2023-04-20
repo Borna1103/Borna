@@ -47,14 +47,24 @@ export default function Home() {
           <div className='py-4 text-center font-bold text-teal-400 mb-10'>
             <h1 className='text-8xl'>Borna Hemmaty</h1>
 
-            <h1 className='text-5xl py-6 font-light'>Computer Scientist - UnderGrad Student</h1>
+            <h1 className='text-5xl py-6 font-light'>Computer Scientist - UnderGraduate Student</h1>
           </div>
             
-          <div className='fixed text-center'>
-            <p className=' text-xl leading-8 font-medium text-white '>
-               I am a student at the University of California San Diego learning to be a better developer as a Math 
-               - Computer Science Major. Fun fact about me, I love getting the crispy chicken combo at Tapioca Express on campus.
-            </p>
+          <div className='fixed'>
+            <div className='border border-lg w-1/2 h-80 bg-slate-500'>
+              <p className='ml-4 text-xl leading-8 font-bold text-emerald-500 mb-10 my-6'>
+                Undergrad Math - Computer Science Major at University of California San Diego
+              </p>
+              <p className='ml-4 text-lg leading-8 font-medium text-white '>
+                I am a student at the University of California San Diego learning to be a better developer as a Math 
+                - Computer Science Major. Fun fact about me, I love getting the crispy chicken combo at Tapioca Express 
+                on campus. 
+              </p>
+            </div>
+            <div className='absolute right-0 top-0 border w-1/2'>
+              <p>test</p>
+
+            </div>
           </div>
         </section>
 
