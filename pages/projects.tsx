@@ -53,6 +53,7 @@ export default function Home() {
             <p className='ml-4 text-xl box-border w-1/3'>
               This project is a learning experience on the 3D CAD modeling software called Blender. 
               To help with my 3D modeling skills and explore the entent of Blender I modeled a donut onto blender with various techniques I learnt.
+              <Image src={donut} width={300} className='bg-blue-400 rounded-3xl border bg-opacity-50 fixed right-0 up-0' alt={'donut'}></Image>
             </p>
           </div>
 
