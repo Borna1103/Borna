@@ -13,14 +13,10 @@ import{AiFillLinkedin, AiFillGithub, AiFillCloud} from 'react-icons/ai';
 export default function Home() {
   let data = new Data();
 
+  const numberOfProjects = data.projects.length;
   const [currentIndex, setCurrentIndex] = useState(0);
   const goToProject = (index) => {
     setCurrentIndex(index);
-  };
-  const nextProject = () => {
-    if (currentIndex < numberOfProjects - 1) {
-      setCurrentIndex(currentIndex + 1);
-    }
   };
 
   const prevProject = () => {
@@ -29,11 +25,12 @@ export default function Home() {
     }
   };
 
-  const numberOfProjects = data.projects.length;
-
-
-
-
+  const nextProject = () => {
+    if (currentIndex < numberOfProjects - 1) {
+      setCurrentIndex(currentIndex + 1);
+    }
+  };
+  
   const [prevScrollPos, setPrevScrollPos] = useState(0);
         const [visible, setVisible] = useState(true);
 
@@ -54,17 +51,6 @@ export default function Home() {
             scroll.scrollToTop({ smooth: true });
         };
   
-  
-        const renderProject = () => {
-          const project = data.projects[currentIndex];
-          return (
-            <div className="project px-20 py-10">
-              <h3 className='font-bold text-teal-400 text-3xl py-3'>{project.Display_name}</h3>
-              <p className='font-bold text-lg'>{project.Description}</p>
-              {/* Add other project content here */}
-            </div>
-          );
-        };
 
         const renderProjectDots = () => {
           return data.projects.map((project, index) => (
@@ -191,16 +177,51 @@ export default function Home() {
          * Projects
                 */}
       <div className='min-h-screen'>
-        <section className="projects-container" style={{ transform: `translateX(-${currentIndex * 100}%) ` }}>
-          {renderProject()}
+        <div className='flex justify-between'>
+        <div className='hover:cursor-pointer' onClick={prevProject}>left</div>
+        <section className="projects-container" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
+
+          <div className="project px-20 py-10">
+            <h3 className='font-bold text-teal-400 text-3xl'>{data.projects[0].Display_name}</h3>
+            <p className='font-bold text-teal-400 text-md'>Skills: {data.projects[0].Skills}</p>
+            <p className='font-bold text-lg py-3'>{data.projects[0].Description}</p>
+              {/* Add other project content here */}
+          </div>
+          <div className="project px-20 py-10">
+            <h3 className='font-bold text-teal-400 text-3xl'>{data.projects[1].Display_name}</h3>
+            <p className='font-bold text-teal-400 text-md'>Skills: {data.projects[1].Skills}</p>
+            <p className='font-bold text-lg py-3'>{data.projects[1].Description}</p>
+            {/* Add other project content here */}
+          </div>
+
+          <div className="project px-20 py-10">
+            <h3 className='font-bold text-teal-400 text-3xl'>{data.projects[2].Display_name}</h3>
+            <p className='font-bold text-teal-400 text-md'>Skills: {data.projects[2].Skills}</p>
+            <p className='font-bold text-lg py-3'>{data.projects[2].Description}</p>
+            {/* Add other project content here */}
+          </div>
+
+          <div className="project px-20 py-10">
+            <h3 className='font-bold text-teal-400 text-3xl'>{data.projects[3].Display_name}</h3>
+            <p className='font-bold text-teal-400 text-md'>Skills: {data.projects[3].Skills}</p>
+            <p className='font-bold text-lg py-3'>{data.projects[3].Description}</p>
+            {/* Add other project content here */}
+          </div>
+
+          <div className="project px-20 py-10">
+            <h3 className='font-bold text-teal-400 text-3xl'>{data.projects[4].Display_name}</h3>
+            <p className='font-bold text-teal-400 text-md'>Skills: {data.projects[4].Skills}</p>
+            <p className='font-bold text-lg py-3'>{data.projects[4].Description}</p>
+            {/* Add other project content here */}
+          </div>
         </section>
-                
-        
+        <div className='hover:cursor-pointer' onClick={nextProject}>right</div>
+          </div>
         <div className="project-dots">
           {renderProjectDots()}
         </div>
-          
       </div>
+      
         
         {/*
          * Back to top Button
