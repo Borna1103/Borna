@@ -176,7 +176,7 @@ export default function Home() {
         {/*
          * Projects
                 */}
-      <div className='min-h-screen'>
+      <div className='min-h-screen' id='projects'>
         <div className='flex justify-between'>
         <div className='hover:cursor-pointer' onClick={prevProject}>left</div>
         <section className="projects-container" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
@@ -217,7 +217,7 @@ export default function Home() {
         </section>
         <div className='hover:cursor-pointer' onClick={nextProject}>right</div>
           </div>
-        <div className="project-dots">
+        <div className="project-dots origin-bottom">
           {renderProjectDots()}
         </div>
       </div>

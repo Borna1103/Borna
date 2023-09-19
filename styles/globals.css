@@ -26,7 +26,7 @@ canvas {
 
 .projects-container {
   display: flex;
-  overflow: visible;
+  overflow: hidden;
   width: 100%;
   transition: transform 0.5s ease-in-out;
 }
