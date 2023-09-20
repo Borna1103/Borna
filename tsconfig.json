@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "Portfolio_Data/data.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/data.tsx"],
   "exclude": ["node_modules"]
 }

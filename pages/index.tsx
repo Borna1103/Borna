@@ -1,11 +1,11 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import back from '/images/river.png'
-import {animations} from '/Website/Portfolio_Data/animations'
+import {animations} from 'Portfolio_Data/animations'
 import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll'
 import React, { useState, useEffect} from 'react'
 import Image from 'next/image'
-import {Data} from '/Website/Portfolio_Data/data'
+import {Data} from '/Users/Borna/AppData'
 import{AiFillLinkedin, AiFillGithub, AiFillCloud} from 'react-icons/ai';
 
 
