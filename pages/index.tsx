@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import back from '/images/river.png'
-import {Data} from '/Portfolio_Data/data'
-import {animations} from '/Portfolio_Data/animations'
+import {Data} from '/Borna/Portfolio_Data/data'
+import {animations} from '/Borna/Portfolio_Data/animations'
 import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll'
 import React, { useState, useEffect} from 'react'
 import Image from 'next/image'
@@ -12,6 +12,7 @@ import{AiFillLinkedin, AiFillGithub, AiFillCloud} from 'react-icons/ai';
 
 export default function Home() {
   let data = new Data();
+  const [isFlipped, setIsFlipped] = useState(false);
 
   const numberOfProjects = data.projects.length;
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -125,51 +126,19 @@ export default function Home() {
           * Skills Page
           */}
         
-        <div className='bg-slate-300 px-10 w-full py-8 min-h-screen' id='skills'>
-          {/* Content */}
-          <h1 className='font-bold text-teal-400 text-xl px-20'> Here are some things I know how to do</h1>
-          <div className='w-1/2'>
-          <h1 className='font-bold text-teal-400 text-xl px-20'> Languages:</h1>
-            <ul className='px-20 py-4'>
-              {data.Languages.map((language, index) => (
-                <li key={index} className='text-gray-800 py-1'>
-                  {language}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className='w-1/2'>
-            <h1 className='font-bold text-teal-400 text-xl px-20'> Software:</h1>
-            <ul className='px-20 py-4'>
-                {data.Developer_Tools.map((Tools, index) => (
-                  <li key={index} className='text-gray-800 py-1'>
-                    {Tools}
-                  </li>
-                ))}
-            </ul>
-          </div>
-
-          <div className='w-1/2'>
-            <h1 className='font-bold text-teal-400 text-xl px-20'> Libraries:</h1>
-            <ul className='px-20 py-4'>
-                {data.Libraries.map((Lib, index) => (
-                  <li key={index} className='text-gray-800 py-1'>
-                    {Lib}
-                  </li>
-                ))}
-            </ul>
-          </div>
-
-          <div className='w-1/2'>
-            <h1 className='font-bold text-teal-400 text-xl px-20'> FrameWorks:</h1>
-            <ul className='px-20 py-4'>
-                {data.Frameworks.map((Fw, index) => (
-                  <li key={index} className='text-gray-800 py-1'>
-                    {Fw}
-                  </li>
-                ))}
-            </ul>
+        <div className="flip-card">
+          <div className={`card ${isFlipped ? 'flipped' : ''}`}>
+            <div className="card-front">
+              {/* Front content */}
+              <h2>Skills</h2>
+              <button onClick={() => setIsFlipped(true)}>Flip</button>
+            </div>
+            <div className="card-back">
+              {/* Back content */}
+              <h2>Languages</h2>
+              {/* Add your languages here */}
+              <button onClick={() => setIsFlipped(false)}>Flip Back</button>
+            </div>
           </div>
         </div>
 
