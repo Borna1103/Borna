@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import back from '/images/river.png'
-import {Data} from '/Borna/Portfolio_Data/data'
-import {animations} from '/Borna/Portfolio_Data/animations'
+import {Data} from '/Portfolio_Data/data'
+import {cardFlip, projectdots, scrollup} from '/Portfolio_Data/animations'
 import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll'
 import React, { useState, useEffect} from 'react'
 import Image from 'next/image'
@@ -12,7 +12,25 @@ import{AiFillLinkedin, AiFillGithub, AiFillCloud} from 'react-icons/ai';
 
 export default function Home() {
   let data = new Data();
-  const [isFlipped, setIsFlipped] = useState(false);
+
+  /*
+  * Scrolling
+  */
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
+
+  const handleScroll = () => {
+    const currentScrollPos = window.pageYOffset;
+    setVisible(currentScrollPos < prevScrollPos);
+    setPrevScrollPos(currentScrollPos);
+  };
+
+  useEffect(() => {
+      window.addEventListener('scroll', handleScroll);
+      return () => {
+      window.removeEventListener('scroll', handleScroll);
+      };
+  }, [prevScrollPos]);
 
   const numberOfProjects = data.projects.length;
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -32,36 +50,16 @@ export default function Home() {
     }
   };
   
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
-        const [visible, setVisible] = useState(true);
+  const renderProjectDots = () => {
+    return data.projects.map((project, index) => (
+      <button
+        key={index}
+        className={`dot ${index === currentIndex ? 'active' : ''}`}
+        onClick={() => goToProject(index)}
+      ></button>
+    ));
+  };
 
-        const handleScroll = () => {
-            const currentScrollPos = window.pageYOffset;
-            setVisible(currentScrollPos < prevScrollPos);
-            setPrevScrollPos(currentScrollPos);
-        };
-
-        useEffect(() => {
-            window.addEventListener('scroll', handleScroll);
-            return () => {
-            window.removeEventListener('scroll', handleScroll);
-            };
-        }, [prevScrollPos]);
-
-        const scrollToTop = () => {
-            scroll.scrollToTop({ smooth: true });
-        };
-  
-
-        const renderProjectDots = () => {
-          return data.projects.map((project, index) => (
-            <button
-              key={index}
-              className={`dot ${index === currentIndex ? 'active' : ''}`}
-              onClick={() => goToProject(index)}
-            ></button>
-          ));
-        };
   return (
     <div>
      {/* 
@@ -76,14 +74,13 @@ export default function Home() {
        * Main Page Content
        */} 
 
-      {/* Page Color */}
       <main>
 
           {/* 
             * Navigation Bar
             */} 
         <div>
-          <nav className={`flex flex-wrap justify-between bg-slate-600 px-10 w-full py-8 transition-transform ${visible ? 'transform translate-y-0' : '-translate-y-full'}`}>
+          <nav className={`flex flex-wrap justify-between bg-slate-600 px-10 w-full py-8 `}>
               <ul className='flex flex-wrap items-center cursor-pointer'>
                 <ScrollLink to='home' smooth={true} duration={500}><AiFillCloud className='text-4xl text-teal-400 transition duration-200 ease-in-out hover:text-emerald-400 transform hover:scale-110'/></ScrollLink>
                 <li className='ml-10 transition duration-200 ease-in-out text-white hover:text-emerald-400 transform hover:scale-110'> 
@@ -114,9 +111,9 @@ export default function Home() {
           * Page Introduction (Home page) 
           */}
        
-        <div className='flex-grow bg-cover bg-center bg-[url(../images/river.png)]' id='home'>
+        <div className='flex-grow bg-slate-500' id='home'>
           {/* Content */}
-          <div className='backdrop-blur-lg py-20 font-bold text-zinc-600 px-20 min-h-screen' >
+          <div className='backdrop-blur-lg py-20 font-bold text-emerald-400 px-20 min-h-screen' >
             <h1 className='text-6xl'>Borna Hemmaty,</h1>
             <h1 className='text-5xl py-6'>Im a Developer</h1>
           </div>
@@ -125,27 +122,17 @@ export default function Home() {
         {/*
           * Skills Page
           */}
-        
-        <div className="flip-card">
-          <div className={`card ${isFlipped ? 'flipped' : ''}`}>
-            <div className="card-front">
-              {/* Front content */}
-              <h2>Skills</h2>
-              <button onClick={() => setIsFlipped(true)}>Flip</button>
-            </div>
-            <div className="card-back">
-              {/* Back content */}
-              <h2>Languages</h2>
-              {/* Add your languages here */}
-              <button onClick={() => setIsFlipped(false)}>Flip Back</button>
-            </div>
-          </div>
-        </div>
+        <div className=' flex bg-slate-400 min-h-screen' id='skills'>
+          <div className='m-auto'>{cardFlip(null, "Languages", data.skills)}</div>
+          
+          <div className='m-auto'>{cardFlip(null, "Tools", data.Tools)}</div>
 
+          <div className='m-auto'>{cardFlip(null, "Experience", data.skills)}</div>
+        </div>
         {/*
          * Projects
                 */}
-      <div className='min-h-screen' id='projects'>
+      <div className='min-h-screen bg-slate-300' id='projects'>
         <div className='flex justify-between'>
         <div className='hover:cursor-pointer' onClick={prevProject}>left</div>
         <section className="projects-container" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
@@ -186,8 +173,8 @@ export default function Home() {
         </section>
         <div className='hover:cursor-pointer' onClick={nextProject}>right</div>
           </div>
-        <div className="project-dots origin-bottom">
-          {renderProjectDots()}
+        <div className='project-dots bottom'>
+          <div className='bottom-2 '>{renderProjectDots()}</div>
         </div>
       </div>
       
@@ -195,11 +182,7 @@ export default function Home() {
         {/*
          * Back to top Button
                 */}
-        <button className={`fixed bottom-4 right-4 bg-gray-800 text-white p-2 rounded-full transition-opacity ${visible ? 'opacity-100' : 'opacity-0'}`} onClick={scrollToTop}>
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
-        </svg>
-      </button>
+        {scrollup(visible)}
       </main>
       
     </div>
