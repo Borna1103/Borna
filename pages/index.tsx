@@ -44,7 +44,7 @@ export default function Home() {
   */
   const numberOfProjects = data.projects.length;
   const [currentIndex, setCurrentIndex] = useState(0);
-  const goToProject = (index) => {
+  const goToProject = (index: React.SetStateAction<number>) => {
     setCurrentIndex(index);
   };
 
@@ -133,11 +133,11 @@ export default function Home() {
           * Skills Page
           */}
         <div className=' flex bg-slate-400 min-h-screen' id='skills'>
-          <div className='m-auto'>{cardFlip(null, "Languages", data.skills)}</div>
+          <div className='m-auto'>{cardFlip("null", "Languages", data.skills)}</div>
           
-          <div className='m-auto'>{cardFlip(null, "Tools", data.Tools)}</div>
+          <div className='m-auto'>{cardFlip("null", "Tools", data.tools)}</div>
 
-          <div className='m-auto'>{cardFlip(null, "Experience", data.skills)}</div>
+          <div className='m-auto'>{cardFlip("null", "Experience", data.skills)}</div>
         </div>
         {/*
          * Projects

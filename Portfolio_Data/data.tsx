@@ -2,7 +2,7 @@ export class Data {
    /*
   * Skills I know
   */
-  Languages = [
+  skills = [
     'Java',
     'C/C++',
     "Python",
@@ -12,20 +12,15 @@ export class Data {
     'R',
     ];
   
-    Libraries = [
+    tools = [
       'Discord API',
-    ];
-  
-    Developer_Tools = [
       'Blender',
       'Git',
       'VS Code',
-      'Vim'
-    ];
-  
-    Frameworks = [
+      'Vim',
       'JUnit',
     ];
+  
     projects = [
     {
       Display_name: "TuringMachine",
