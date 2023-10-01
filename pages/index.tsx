@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import back from '/images/river.png'
-import {Data} from '/Portfolio_Data/data'
-import {cardFlip, projectdots, scrollup} from '/Portfolio_Data/animations'
+import {Data} from '../Portfolio_Data/data'
+import {cardFlip, projectdots} from '../Portfolio_Data/animations'
 import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll'
 import React, { useState, useEffect} from 'react'
 import Image from 'next/image'
@@ -17,11 +17,14 @@ export default function Home() {
   * Scrolling
   */
   const [prevScrollPos, setPrevScrollPos] = useState(0);
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(false);
 
   const handleScroll = () => {
     const currentScrollPos = window.pageYOffset;
     setVisible(currentScrollPos < prevScrollPos);
+    if(currentScrollPos == 0){
+      setVisible(false);
+    }
     setPrevScrollPos(currentScrollPos);
   };
 
@@ -32,6 +35,13 @@ export default function Home() {
       };
   }, [prevScrollPos]);
 
+  const scrollToTop = () => {
+        scroll.scrollToTop({ smooth: true });
+    };
+
+  /*
+  * Project
+  */
   const numberOfProjects = data.projects.length;
   const [currentIndex, setCurrentIndex] = useState(0);
   const goToProject = (index) => {
@@ -182,7 +192,11 @@ export default function Home() {
         {/*
          * Back to top Button
                 */}
-        {scrollup(visible)}
+        <button className={`fixed bottom-4 right-4 bg-gray-800 text-white p-2 rounded-full transition-opacity ${visible ? 'opacity-100' : 'opacity-0'}`} onClick={scrollToTop}>
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+          </svg>
+        </button>
       </main>
       
     </div>

@@ -30,7 +30,7 @@ export function projectdots() {
         
     }
 
-export function scrollup(visible: boolean) {
+export function scrollup() {
     const scrollToTop = () => {
         scroll.scrollToTop({ smooth: true });
     };
