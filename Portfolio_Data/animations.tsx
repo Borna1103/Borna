@@ -10,12 +10,12 @@ export function cardFlip(image: string, front: string, items : string[]) {
 
   return(
     <div className="flip-card">
-            <div className='drop-shadow-xl card-front' >
+            <div className='drop-shadow-xl card-front'>
             {/* Front content */}
                 <h2>{image}</h2>
-                <h2>{front}</h2>
+                <h2 className='font-bold text-teal-400 text-lg'>{front}</h2>
             </div>
-            <div className="card-back drop-shadow-sm" >
+            <div className="card-back drop-shadow-xl" >
             {/* Back content */}
         {items}
               {/* Add your languages here */}

@@ -54,6 +54,7 @@ export default function Home() {
     }
   };
 
+  
   const nextProject = () => {
     if (currentIndex < numberOfProjects - 1) {
       setCurrentIndex(currentIndex + 1);
