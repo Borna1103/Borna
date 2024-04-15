@@ -9,6 +9,9 @@ import Image from 'next/image'
 import{AiFillLinkedin, AiFillGithub, AiFillCloud} from 'react-icons/ai';
 
 
+/*
+ * Start
+*/
 
 export default function Home() {
   let data = new Data();
@@ -71,6 +74,11 @@ export default function Home() {
     ));
   };
 
+
+  /*
+   * ! Page Start
+  */
+ 
   return (
     <div>
      {/* 
@@ -91,7 +99,7 @@ export default function Home() {
             * Navigation Bar
             */} 
         <div>
-          <nav className={`flex flex-wrap justify-between bg-slate-600 px-10 w-full py-8 `}>
+          <nav className={`flex flex-wrap justify-between bg-slate-700 px-10 w-full py-8 `}>
               <ul className='flex flex-wrap items-center cursor-pointer'>
                 <ScrollLink to='home' smooth={true} duration={500}><AiFillCloud className='text-4xl text-teal-400 transition duration-200 ease-in-out hover:text-emerald-400 transform hover:scale-110'/></ScrollLink>
                 <li className='ml-10 transition duration-200 ease-in-out text-white hover:text-emerald-400 transform hover:scale-110'> 
@@ -122,9 +130,9 @@ export default function Home() {
           * Page Introduction (Home page) 
           */}
        
-        <div className='flex-grow bg-slate-500' id='home'>
+        <div className='flex-grow dark:bg-gray-800' id='home'>
           {/* Content */}
-          <div className='backdrop-blur-lg py-20 font-bold text-emerald-400 px-20 min-h-screen' >
+          <div className='backdrop-blur-lg py-20 font-bold text-emerald-400 px-20 min-h-screen cursor-default' >
             <h1 className='text-6xl'>Borna Hemmaty,</h1>
             <h1 className='text-5xl py-6'>Im a Developer</h1>
           </div>
@@ -133,62 +141,107 @@ export default function Home() {
         {/*
           * Skills Page
           */}
-        <div className=' flex bg-slate-400 min-h-screen' id='skills'>
-          <div className='m-auto'>{cardFlip("null", "Languages", data.skills)}</div>
+        <div className=' flex dark:bg-gray-800 h-screen' id='skills'>
+          <div className='m-auto'>{cardFlip("", "PantryPal", 
+          "Developed an online recipe book application with a team that takes in voice input to generate recipes to then store for later use",
+          ["Multi Device Functionality"],
+          ""
+          )}</div>
           
-          <div className='m-auto'>{cardFlip("null", "Tools", data.tools)}</div>
+          <div className='m-auto'>{cardFlip("", "Huffman Tree Encoding and Decoding", "", [], "")}</div>
 
-          <div className='m-auto'>{cardFlip("null", "Experience", data.skills)}</div>
+          <div className='m-auto'>{cardFlip("", "Turing Machine", "", [],"")}</div>
         </div>
+
         {/*
          * Projects
                 */}
-      <div className='min-h-screen bg-slate-300' id='projects'>
-        <div className='flex justify-between'>
-        <div className='hover:cursor-pointer' onClick={prevProject}>left</div>
-        <section className="projects-container" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
-
-          <div className="project px-20 py-10">
-            <h3 className='font-bold text-teal-400 text-3xl'>{data.projects[0].Display_name}</h3>
-            <p className='font-bold text-teal-400 text-md'>Skills: {data.projects[0].Skills}</p>
-            <p className='font-bold text-lg py-3'>{data.projects[0].Description}</p>
-              {/* Add other project content here */}
-          </div>
-          <div className="project px-20 py-10">
-            <h3 className='font-bold text-teal-400 text-3xl'>{data.projects[1].Display_name}</h3>
-            <p className='font-bold text-teal-400 text-md'>Skills: {data.projects[1].Skills}</p>
-            <p className='font-bold text-lg py-3'>{data.projects[1].Description}</p>
-            {/* Add other project content here */}
+        <section className="bg-white dark:bg-gray-900 antialiased">
+        <div className="max-w-screen-xl px-4 py-8 mx-auto lg:px-6 sm:py-16 lg:py-24">
+          <div className="max-w-2xl mx-auto text-center">
+            <h2 className="text-3xl font-extrabold leading-tight tracking-tight text-gray-900 sm:text-4xl dark:text-white">
+              My Technical Skills
+            </h2>
+            <p className="mt-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+              What I know how to do!
+            </p>
           </div>
 
-          <div className="project px-20 py-10">
-            <h3 className='font-bold text-teal-400 text-3xl'>{data.projects[2].Display_name}</h3>
-            <p className='font-bold text-teal-400 text-md'>Skills: {data.projects[2].Skills}</p>
-            <p className='font-bold text-lg py-3'>{data.projects[2].Description}</p>
-            {/* Add other project content here */}
-          </div>
+          <div className="grid grid-cols-1 mt-12 text-center sm:mt-16 gap-x-20 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="space-y-4">
+              <span
+                className="bg-gray-100 text-gray-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
+                Alphabet Inc.
+              </span>
+              <h3 className="text-2xl font-bold leading-tight text-gray-900 dark:text-white">
+                Official website
+              </h3>
+              <p className="text-lg font-normal text-gray-500 dark:text-gray-400">
+                Flowbite helps you connect with friends, family and communities of people who share your interests.
+              </p>
+              <a href="#" title=""
+                className="text-white bg-primary-700 justify-center hover:bg-primary-800 inline-flex items-center  focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                role="button">
+                View case study
+                <svg aria-hidden="true" className="w-5 h-5 ml-2 -mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                  fill="currentColor">
+                  <path fill-rule="evenodd"
+                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                    clip-rule="evenodd" />
+                </svg>
+              </a>
+            </div>
 
-          <div className="project px-20 py-10">
-            <h3 className='font-bold text-teal-400 text-3xl'>{data.projects[3].Display_name}</h3>
-            <p className='font-bold text-teal-400 text-md'>Skills: {data.projects[3].Skills}</p>
-            <p className='font-bold text-lg py-3'>{data.projects[3].Description}</p>
-            {/* Add other project content here */}
-          </div>
+            <div className="space-y-4">
+              <span
+                className="bg-gray-100 text-gray-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
+                Microsoft Corp.
+              </span>
+              <h3 className="text-2xl font-bold leading-tight text-gray-900 dark:text-white">
+                Management system
+              </h3>
+              <p className="text-lg font-normal text-gray-500 dark:text-gray-400">
+                Flowbite helps you connect with friends, family and communities of people who share your interests.
+              </p>
+              <a href="#" title=""
+                className="text-white bg-primary-700 justify-center hover:bg-primary-800 inline-flex items-center  focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                role="button">
+                View case study
+                <svg aria-hidden="true" className="w-5 h-5 ml-2 -mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                  fill="currentColor">
+                  <path fill-rule="evenodd"
+                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                    clip-rule="evenodd" />
+                </svg>
+              </a>
+            </div>
 
-          <div className="project px-20 py-10">
-            <h3 className='font-bold text-teal-400 text-3xl'>{data.projects[4].Display_name}</h3>
-            <p className='font-bold text-teal-400 text-md'>Skills: {data.projects[4].Skills}</p>
-            <p className='font-bold text-lg py-3'>{data.projects[4].Description}</p>
-            {/* Add other project content here */}
+            <div className="space-y-4">
+              <span
+                className="bg-gray-100 text-gray-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
+                Adobe Inc.
+              </span>
+              <h3 className="text-2xl font-bold leading-tight text-gray-900 dark:text-white">
+                Logo design
+              </h3>
+              <p className="text-lg font-normal text-gray-500 dark:text-gray-400">
+                Flowbite helps you connect with friends, family and communities of people who share your interests.
+              </p>
+              <a href="#" title=""
+                className="text-white bg-primary-700 justify-center hover:bg-primary-800 inline-flex items-center  focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                role="button">
+                View case study
+                <svg aria-hidden="true" className="w-5 h-5 ml-2 -mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                  fill="currentColor">
+                  <path fill-rule="evenodd"
+                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                    clip-rule="evenodd" />
+                </svg>
+              </a>
+            </div>
           </div>
-        </section>
-        <div className='hover:cursor-pointer' onClick={nextProject}>right</div>
-          </div>
-        <div className='project-dots bottom'>
-          <div className='bottom-2 '>{renderProjectDots()}</div>
         </div>
-      </div>
-      
+      </section>
         
         {/*
          * Back to top Button
