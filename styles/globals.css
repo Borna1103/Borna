@@ -87,14 +87,14 @@ canvas {
 }
 
 .card-front {
-  background-color: #4f8fa8;
+  background-color: #1c1c1f;
   transform: rotateY(0deg); /* Initial rotation for the front side */
   transform-origin: center;
   transition: transform 0.5s; /* Add a transition for a smooth flip */
 }
 
 .card-back {
-  background-color: #359bb4;
+  background-color: #1c1c1f;
   transform: rotateY(180deg);
   transform-origin: center;
   transition: transform 0.5s; /* Add a transition for a smooth flip */

@@ -1,12 +1,12 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import back from '/images/river.png'
 import {Data} from '../Portfolio_Data/data'
 import {cardFlip, projectdots} from '../Portfolio_Data/animations'
 import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll'
 import React, { useState, useEffect} from 'react'
-import Image from 'next/image'
+import logo from "images/Logo.png"
 import{AiFillLinkedin, AiFillGithub, AiFillCloud} from 'react-icons/ai';
+import Image from 'next/image'
 
 
 /*
@@ -99,7 +99,7 @@ export default function Home() {
             * Navigation Bar
             */} 
         <div>
-          <nav className={`flex flex-wrap justify-between bg-slate-700 px-10 w-full py-8 `}>
+          <nav className={`flex flex-wrap justify-between bg-slate-800 px-10 w-full py-8 `}>
               <ul className='flex flex-wrap items-center cursor-pointer'>
                 <ScrollLink to='home' smooth={true} duration={500}><AiFillCloud className='text-4xl text-teal-400 transition duration-200 ease-in-out hover:text-emerald-400 transform hover:scale-110'/></ScrollLink>
                 <li className='ml-10 transition duration-200 ease-in-out text-white hover:text-emerald-400 transform hover:scale-110'> 
@@ -130,22 +130,35 @@ export default function Home() {
           * Page Introduction (Home page) 
           */}
        
-        <div className='flex-grow dark:bg-gray-800' id='home'>
+        <div className='flex-grow dark:bg-gray-900' id='home'>
           {/* Content */}
-          <div className='backdrop-blur-lg py-20 font-bold text-emerald-400 px-20 min-h-screen cursor-default' >
-            <h1 className='text-6xl'>Borna Hemmaty,</h1>
-            <h1 className='text-5xl py-6'>Im a Developer</h1>
+          <div className='backdrop-blur-lg py-20 font-bold text-teal-400 px-20 min-h-screen cursor-default' >
+            <div className='flex'> 
+              <div>
+                <h1 className='text-6xl'>Borna Hemmaty,</h1>
+                <h1 className='text-5xl py-6'>Im a Developer</h1>
+              </div>
+              <Image className="flex-3" src={logo} alt={''}></Image>
+            </div>
+           
+            
           </div>
         </div>
 
         {/*
-          * Skills Page
+          * Empty Space 
           */}
-        <div className=' flex dark:bg-gray-800 h-screen' id='skills'>
+
+      <div className='  dark:bg-gray-900 min-h-screen'></div>
+
+        {/*
+          * Projects 
+          */}
+        <div className=' flex dark:bg-gray-900 h-screen' id='skills'>
           <div className='m-auto'>{cardFlip("", "PantryPal", 
           "Developed an online recipe book application with a team that takes in voice input to generate recipes to then store for later use",
-          ["Multi Device Functionality"],
-          ""
+          ["Multi Device Functionality through MongoDB", "Voice input to generate recipe based off of breakfast, lunch, or dinner and current ingredients", "Save and edit generated recipes", "Leverages DALL-E API to generate images of recipes to enhance user experience"],
+          "Java, JavaFx, MongoDB, Whisper API, OpenAI API, DALL-E API"
           )}</div>
           
           <div className='m-auto'>{cardFlip("", "Huffman Tree Encoding and Decoding", "", [], "")}</div>
@@ -154,7 +167,7 @@ export default function Home() {
         </div>
 
         {/*
-         * Projects
+         * Skills
                 */}
         <section className="bg-white dark:bg-gray-900 antialiased">
         <div className="max-w-screen-xl px-4 py-8 mx-auto lg:px-6 sm:py-16 lg:py-24">
@@ -242,6 +255,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      
         
         {/*
          * Back to top Button
