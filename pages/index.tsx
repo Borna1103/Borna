@@ -132,13 +132,14 @@ export default function Home() {
        
         <div className='flex-grow dark:bg-gray-900' id='home'>
           {/* Content */}
-          <div className='backdrop-blur-lg py-20 font-bold text-teal-400 px-20 min-h-screen cursor-default' >
-            <div className='flex'> 
+          <div className='py-20 font-bold text-teal-400  px-20 min-h-screen cursor-default' >
+            <div className='flex justify-between'> 
               <div>
                 <h1 className='text-6xl'>Borna Hemmaty,</h1>
                 <h1 className='text-5xl py-6'>Im a Developer</h1>
+                <h2 className='ml-2 mt-5 italic'>Learning to be a better developer!</h2>
               </div>
-              <Image className="flex-3" src={logo} alt={''}></Image>
+              <Image className="content-end mr-40" draggable="false" src={logo} alt={''}></Image>
             </div>
            
             
@@ -158,12 +159,13 @@ export default function Home() {
           <div className='m-auto'>{cardFlip("", "PantryPal", 
           "Developed an online recipe book application with a team that takes in voice input to generate recipes to then store for later use",
           ["Multi Device Functionality through MongoDB", "Voice input to generate recipe based off of breakfast, lunch, or dinner and current ingredients", "Save and edit generated recipes", "Leverages DALL-E API to generate images of recipes to enhance user experience"],
-          "Java, JavaFx, MongoDB, Whisper API, OpenAI API, DALL-E API"
+          "Java, JavaFx, MongoDB, Whisper API, OpenAI API, DALL-E API",
+          ""
           )}</div>
           
-          <div className='m-auto'>{cardFlip("", "Huffman Tree Encoding and Decoding", "", [], "")}</div>
+          <div className='m-auto'>{cardFlip("", "Huffman Tree Encoding and Decoding", "", [], "", "")}</div>
 
-          <div className='m-auto'>{cardFlip("", "Turing Machine", "", [],"")}</div>
+          <div className='m-auto'>{cardFlip("", "Turing Machine", "", [],"", "")}</div>
         </div>
 
         {/*
@@ -180,79 +182,38 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 mt-12 text-center sm:mt-16 gap-x-20 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
-            <div className="space-y-4">
-              <span
-                className="bg-gray-100 text-gray-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
-                Alphabet Inc.
-              </span>
-              <h3 className="text-2xl font-bold leading-tight text-gray-900 dark:text-white">
-                Official website
-              </h3>
-              <p className="text-lg font-normal text-gray-500 dark:text-gray-400">
-                Flowbite helps you connect with friends, family and communities of people who share your interests.
-              </p>
-              <a href="#" title=""
-                className="text-white bg-primary-700 justify-center hover:bg-primary-800 inline-flex items-center  focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
-                role="button">
-                View case study
-                <svg aria-hidden="true" className="w-5 h-5 ml-2 -mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-                  fill="currentColor">
-                  <path fill-rule="evenodd"
-                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                    clip-rule="evenodd" />
-                </svg>
-              </a>
-            </div>
-
-            <div className="space-y-4">
-              <span
-                className="bg-gray-100 text-gray-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
-                Microsoft Corp.
-              </span>
-              <h3 className="text-2xl font-bold leading-tight text-gray-900 dark:text-white">
-                Management system
-              </h3>
-              <p className="text-lg font-normal text-gray-500 dark:text-gray-400">
-                Flowbite helps you connect with friends, family and communities of people who share your interests.
-              </p>
-              <a href="#" title=""
-                className="text-white bg-primary-700 justify-center hover:bg-primary-800 inline-flex items-center  focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
-                role="button">
-                View case study
-                <svg aria-hidden="true" className="w-5 h-5 ml-2 -mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-                  fill="currentColor">
-                  <path fill-rule="evenodd"
-                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                    clip-rule="evenodd" />
-                </svg>
-              </a>
-            </div>
-
-            <div className="space-y-4">
-              <span
-                className="bg-gray-100 text-gray-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
-                Adobe Inc.
-              </span>
-              <h3 className="text-2xl font-bold leading-tight text-gray-900 dark:text-white">
-                Logo design
-              </h3>
-              <p className="text-lg font-normal text-gray-500 dark:text-gray-400">
-                Flowbite helps you connect with friends, family and communities of people who share your interests.
-              </p>
-              <a href="#" title=""
-                className="text-white bg-primary-700 justify-center hover:bg-primary-800 inline-flex items-center  focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
-                role="button">
-                View case study
-                <svg aria-hidden="true" className="w-5 h-5 ml-2 -mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-                  fill="currentColor">
-                  <path fill-rule="evenodd"
-                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                    clip-rule="evenodd" />
-                </svg>
-              </a>
-            </div>
-          </div>
+          <ul className="mt-10 flex flex-wrap items-center justify-center text-gray-900 dark:text-white">
+          <li>
+              <a href="#" className="me-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:text-indigo-500 md:me-6 ">Java</a>
+          </li>
+          <li>
+              <a href="#" className="me-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:text-indigo-500 md:me-6">C++</a>
+          </li>
+          <li>
+              <a href="#" className="me-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:text-indigo-500 md:me-6 ">C#</a>
+          </li>
+          <li>
+              <a href="#" className="me-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:text-indigo-500 md:me-6">C</a>
+          </li>
+          <li>
+              <a href="#" className="me-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:text-indigo-500 md:me-6">Python</a>
+          </li>
+          <li>
+              <a href="#" className="me-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:text-indigo-500 md:me-6">Javascript</a>
+          </li>
+          <li>
+              <a href="#" className="me-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:text-indigo-500 md:me-6">R</a>
+          </li>
+          <li>
+              <a href="#" className="me-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:text-indigo-500 md:me-6">LaTeX</a>
+          </li>
+          <li>
+              <a href="#" className="me-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:text-indigo-500 md:me-6 ">HTML</a>
+          </li>
+          <li>
+              <a href="#" className="me-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:text-indigo-500 md:me-6 ">CSS</a>
+          </li>
+      </ul>
         </div>
       </section>
 

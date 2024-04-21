@@ -1,14 +1,16 @@
 import React, { useState, useEffect} from 'react'
-import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll'
-import donut from '/images/river.png'
+import { AiFillGithub } from "react-icons/ai";
 
 
+/*
+ * Project Cards
+ */
+export function cardFlip(image: string, front: string, about : string, features : string[], skills : string, link: string) {
+  let has_Link = true
 
-export function cardFlip(image: string, front: string, about : string, features : string[], skills : string) {
-    /*
-  * Skills Page Animations
-  */
- 
+  if(link == ""){
+    has_Link = false
+  }
   return(
     <div className="flip-card">
 
@@ -41,7 +43,7 @@ export function cardFlip(image: string, front: string, about : string, features 
                 </ol>
                 </div>
 
-
+                {/* Feature List */}
                 <div className='flex'>
                   <h1>test</h1>
                   <h1>test2</h1>
