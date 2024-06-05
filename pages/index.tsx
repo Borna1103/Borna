@@ -205,15 +205,15 @@ export default function Home() {
         <section className=" bg-gray-900 antialiased" id="skills">
         <div className="max-w-screen-xl px-4 py-8 mx-auto lg:px-6 sm:py-16 lg:py-24">
           <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-3xl font-extrabold leading-tight tracking-tight text-gray-900 sm:text-4xl text-white">
+            <h2 className="text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl text-white">
               My Technical Skills
             </h2>
-            <p className="mt-4 text-base font-normal text-gray-500 sm:text-xl text-gray-400">
+            <p className="mt-4 text-base font-normal sm:text-xl text-gray-400">
               What I know how to do!
             </p>
           </div>
 
-          <ul className="mt-10 flex flex-wrap items-center justify-center text-gray-900 text-white">
+          <ul className="mt-10 flex flex-wrap items-center justify-center text-white">
           <li>
               <a className="me-4 transition ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-default hover:text-indigo-500 md:me-6 ">Java</a>
           </li>
