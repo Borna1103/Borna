@@ -131,7 +131,7 @@ export default function Home() {
           * Page Introduction (Home page) 
           */}
        
-        <div className='flex-grow dark:bg-gray-900' id='home'>
+        <div className='flex-grow bg-gray-900' id='home'>
           {/* Content */}
           <div className='py-20 font-bold text-teal-400  px-20 min-h-screen cursor-default' >
             <div className='flex justify-between'> 
@@ -148,13 +148,13 @@ export default function Home() {
         {/*
           * Empty Space 
           */}
-        <div className='dark:bg-gray-900 h-80'></div>
+        <div className='bg-gray-900 h-80'></div>
    
 
         {/*
           * Projects 
           */}
-        <div className='dark:bg-gray-900 h-screen' id='projects'>
+        <div className='bg-gray-900 h-screen' id='projects'>
           
           <div className='py-20 font-bold text-teal-400  px-20 cursor-default' >
                 <h1 className='text-5xl'>Projects:</h1>
@@ -186,7 +186,7 @@ export default function Home() {
 
 
 
-        <div className='  dark:bg-gray-900 min-h-screen'>
+        <div className='  bg-gray-900 min-h-screen'>
           <div className='py-20 font-bold text-teal-400  px-20 min-h-screen cursor-default' >
             <h1 className='text-5xl mb-20'>What Am I Currently Working On?</h1>
             <div className='flex '>
@@ -202,18 +202,18 @@ export default function Home() {
         {/*
          * Skills
                 */}
-        <section className="bg-white dark:bg-gray-900 antialiased" id="skills">
+        <section className="bg-white bg-gray-900 antialiased" id="skills">
         <div className="max-w-screen-xl px-4 py-8 mx-auto lg:px-6 sm:py-16 lg:py-24">
           <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-3xl font-extrabold leading-tight tracking-tight text-gray-900 sm:text-4xl dark:text-white">
+            <h2 className="text-3xl font-extrabold leading-tight tracking-tight text-gray-900 sm:text-4xl text-white">
               My Technical Skills
             </h2>
-            <p className="mt-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+            <p className="mt-4 text-base font-normal text-gray-500 sm:text-xl text-gray-400">
               What I know how to do!
             </p>
           </div>
 
-          <ul className="mt-10 flex flex-wrap items-center justify-center text-gray-900 dark:text-white">
+          <ul className="mt-10 flex flex-wrap items-center justify-center text-gray-900 text-white">
           <li>
               <a className="me-4 transition ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-default hover:text-indigo-500 md:me-6 ">Java</a>
           </li>
