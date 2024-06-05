@@ -156,16 +156,16 @@ export default function Home() {
           * Projects 
           */}
         <div className=' flex dark:bg-gray-900 h-screen' id='skills'>
-          <div className='m-auto'>{cardFlip("", "PantryPal", 
+          <div className='m-auto'>{cardFlip("", "PantryPal App", 
           "Developed an online recipe book application with a team that takes in voice input to generate recipes to then store for later use",
           ["Multi Device Functionality through MongoDB", "Voice input to generate recipe based off of breakfast, lunch, or dinner and current ingredients", "Save and edit generated recipes", "Leverages DALL-E API to generate images of recipes to enhance user experience"],
           "Java, JavaFx, MongoDB, Whisper API, OpenAI API, DALL-E API",
           ""
           )}</div>
           
-          <div className='m-auto'>{cardFlip("", "Huffman Tree Encoding and Decoding", "", [], "", "")}</div>
+          <div className='m-auto'>{cardFlip("", "Fortune Hut Web App", "Worked to improve an existing app by adding online funcitonality and a better developer experience with documentation, testing, and applying a refactor to split the backend and frontend of the code base with a MVC pattern", [], "Javascript, HTML, CSS, MongoDB, Express, Jest", "")}</div>
 
-          <div className='m-auto'>{cardFlip("", "Turing Machine", "", [],"", "")}</div>
+          <div className='m-auto'>{cardFlip("", "Huffman Tree Encoding and Decoding", "", [],"", "")}</div>
         </div>
 
         {/*
@@ -184,34 +184,34 @@ export default function Home() {
 
           <ul className="mt-10 flex flex-wrap items-center justify-center text-gray-900 dark:text-white">
           <li>
-              <a href="#" className="me-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:text-indigo-500 md:me-6 ">Java</a>
+              <a className="me-4 transition ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-default hover:text-indigo-500 md:me-6 ">Java</a>
           </li>
           <li>
-              <a href="#" className="me-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:text-indigo-500 md:me-6">C++</a>
+              <a className="me-4 transition ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-default hover:text-indigo-500 md:me-6">C++</a>
           </li>
           <li>
-              <a href="#" className="me-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:text-indigo-500 md:me-6 ">C#</a>
+              <a className="me-4 transition ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-default hover:text-indigo-500 md:me-6 ">C#</a>
           </li>
           <li>
-              <a href="#" className="me-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:text-indigo-500 md:me-6">C</a>
+              <a className="me-4 transition ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-default hover:text-indigo-500 md:me-6">C</a>
           </li>
           <li>
-              <a href="#" className="me-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:text-indigo-500 md:me-6">Python</a>
+              <a className="me-4 transition ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-default hover:text-indigo-500 md:me-6">Python</a>
           </li>
           <li>
-              <a href="#" className="me-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:text-indigo-500 md:me-6">Javascript</a>
+              <a className="me-4 transition ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-default hover:text-indigo-500 md:me-6">Javascript</a>
           </li>
           <li>
-              <a href="#" className="me-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:text-indigo-500 md:me-6">R</a>
+              <a className="me-4 transition ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-default hover:text-indigo-500 md:me-6">R</a>
           </li>
           <li>
-              <a href="#" className="me-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:text-indigo-500 md:me-6">LaTeX</a>
+              <a className="me-4 transition ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-default hover:text-indigo-500 md:me-6">LaTeX</a>
           </li>
           <li>
-              <a href="#" className="me-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:text-indigo-500 md:me-6 ">HTML</a>
+              <a className="me-4 transition ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-default hover:text-indigo-500 md:me-6 ">HTML</a>
           </li>
           <li>
-              <a href="#" className="me-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:text-indigo-500 md:me-6 ">CSS</a>
+              <a className="me-4 transition ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-default hover:text-indigo-500 md:me-6 ">CSS</a>
           </li>
       </ul>
         </div>
