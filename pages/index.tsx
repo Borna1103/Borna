@@ -5,6 +5,7 @@ import {cardFlip} from '../Portfolio_Data/animations'
 import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll'
 import React, { useState, useEffect} from 'react'
 import logo from "public/Logo.png"
+import workingOn from "public/workingOn.png"
 import{AiFillLinkedin, AiFillGithub, AiFillCloud} from 'react-icons/ai';
 import Image from 'next/image'
 
@@ -106,10 +107,10 @@ export default function Home() {
                   <ScrollLink to='home' smooth={true} duration={500}>Home</ScrollLink>
                 </li>
                 <li className='ml-10 transition duration-200 ease-in-out text-white hover:text-emerald-400 transform hover:scale-110'>
-                  <ScrollLink to='skills' smooth={true} duration={500}>Skills</ScrollLink>
+                  <ScrollLink to='projects' smooth={true} duration={500}>Projects</ScrollLink>
                 </li>
                 <li className='ml-10 transition duration-200 ease-in-out text-white hover:text-emerald-400 transform hover:scale-110'>
-                  <ScrollLink to='projects' smooth={true} duration={500}>Projects</ScrollLink>
+                  <ScrollLink to='skills' smooth={true} duration={500}>Skills</ScrollLink>
                 </li>
               </ul>
               <ul className="flex items-center">
@@ -155,7 +156,7 @@ export default function Home() {
         {/*
           * Projects 
           */}
-        <div className=' flex dark:bg-gray-900 h-screen' id='skills'>
+        <div className=' flex dark:bg-gray-900 h-screen' id='projects'>
           <div className='m-auto'>{cardFlip("", "PantryPal App", 
           "Developed an online recipe book application with a team that takes in voice input to generate recipes to then store for later use",
           ["Multi Device Functionality through MongoDB", "Voice input to generate recipe based off of breakfast, lunch, or dinner and current ingredients", "Save and edit generated recipes", "Leverages DALL-E API to generate images of recipes to enhance user experience"],
@@ -178,12 +179,14 @@ export default function Home() {
 
 
         <div className='  dark:bg-gray-900 min-h-screen'>
-        <div className='py-20 font-bold text-teal-400  px-20 min-h-screen cursor-default' >
-            <div className='flex justify-between'> 
-              <div>
-                <h1 className='text-5xl'>What Am I Currently Working On?</h1>
-                
-              </div>
+          <div className='py-20 font-bold text-teal-400  px-20 min-h-screen cursor-default' >
+            <h1 className='text-5xl mb-20'>What Am I Currently Working On?</h1>
+            <div className='flex '>
+                <div>
+                  <h2 className='text-xl mt-10 ml-10 max-w-2xl mb-20'> I am currently working on a 2D Game used as a portfolio. Using Kaboom which is a package for javascript, I want to create a 2D platformer similar to Mario.</h2>
+                  <Link href="https://github.com/Borna1103/2D-Portfolio" className='ml-10 transition duration-200 ease-in-out bg-gradient-to-r from-teal-600 to-emerald-400 text-white px-4 py-2 rounded transform hover:scale-110 hover:text-gray-500' target='_blank'>Github Link!</Link>
+                </div>
+              <Image className="content-end ml-20 mt-10" draggable="false" src={workingOn} alt={''}  width={1000} quality={100}></Image>
             </div>
           </div>
 
@@ -191,7 +194,7 @@ export default function Home() {
         {/*
          * Skills
                 */}
-        <section className="bg-white dark:bg-gray-900 antialiased">
+        <section className="bg-white dark:bg-gray-900 antialiased" id="skills">
         <div className="max-w-screen-xl px-4 py-8 mx-auto lg:px-6 sm:py-16 lg:py-24">
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-3xl font-extrabold leading-tight tracking-tight text-gray-900 sm:text-4xl dark:text-white">
