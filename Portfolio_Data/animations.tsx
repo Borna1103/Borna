@@ -1,4 +1,5 @@
 import React, { useState, useEffect} from 'react'
+import Link from 'next/link'
 import { AiFillGithub } from "react-icons/ai";
 
 
@@ -7,7 +8,6 @@ import { AiFillGithub } from "react-icons/ai";
  */
 export function cardFlip(image: string, front: string, about : string, features : string[], skills : string, link: string) {
   let has_Link = true
-
   if(link == ""){
     has_Link = false
   }
@@ -34,21 +34,16 @@ export function cardFlip(image: string, front: string, about : string, features 
                 
                 {/* Feature List */}
                 <div className='mt-5'>
-                <h2 className='text-lg'>Features:</h2>
-                <ol className="list-disc ml-5">
-                  <li>{features[0]}</li>
-                  <li>{features[1]}</li>
-                  <li>{features[2]}</li>
-                  <li>{features[3]}</li>
-                </ol>
+                  <h2 className='text-lg'>Features:</h2>
+                  <ol className="list-disc ml-5">
+                    <li>{features[0]}</li>
+                    <li>{features[1]}</li>
+                    <li>{features[2]}</li>
+                    <li>{features[3]}</li>
+                  </ol>
                 </div>
 
-                {/* Feature List */}
-                <div className='flex'>
-                  <h1>test</h1>
-                  <h1>test2</h1>
-
-                </div>
+                <Link href='google.com' target='_blank'>link</Link>
               </div>
             </div>
     </div>

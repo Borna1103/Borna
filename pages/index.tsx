@@ -4,7 +4,7 @@ import {Data} from '../Portfolio_Data/data'
 import {cardFlip, projectdots} from '../Portfolio_Data/animations'
 import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll'
 import React, { useState, useEffect} from 'react'
-import logo from "images/Logo.png"
+import logo from "public/Logo.png"
 import{AiFillLinkedin, AiFillGithub, AiFillCloud} from 'react-icons/ai';
 import Image from 'next/image'
 
@@ -114,11 +114,11 @@ export default function Home() {
               </ul>
               <ul className="flex items-center">
                 <li className='text-4xl flex gap-10 text-white ml-10 content-end'>
-                  <Link href="https://github.com/Borna1103" target="_blank"><AiFillGithub  href="#" className="transition duration-200 ease-in-out text-white hover:text-black transform hover:scale-110"/></Link>
-                  <Link href="https://www.linkedin.com/in/borna-hemmaty/" target="_blank"><AiFillLinkedin  href="google.com" className='transition duration-200 ease-in-out text-white hover:text-blue-500 transform hover:scale-110'/></Link>
+                  <Link href="https://github.com/Borna1103" target="_blank"><AiFillGithub  className="transition duration-200 ease-in-out text-white hover:text-black transform hover:scale-110"/></Link>
+                  <Link href="https://www.linkedin.com/in/borna-hemmaty/" target="_blank"><AiFillLinkedin className='transition duration-200 ease-in-out text-white hover:text-blue-500 transform hover:scale-110'/></Link>
                 </li>
                 <li>
-                  <Link className=" transition duration-200 ease-in-out bg-gradient-to-r from-teal-600 to-emerald-400 text-white px-4 py-2 rounded ml-10 transform hover:scale-110 hover:text-gray-500" href='https://docs.google.com/document/d/1KWuzWsK7h3EPdu6ejwP-RgXp1NCmHELEJt0fr2j9-jc/edit?usp=sharing' target="_blank">
+                  <Link className=" transition duration-200 ease-in-out bg-gradient-to-r from-teal-600 to-emerald-400 text-white px-4 py-2 rounded ml-10 transform hover:scale-110 hover:text-gray-500" href='https://drive.google.com/file/d/1arGy_pvBLR4m4TtuUIRyBAPaFWFlRV9q/view?usp=sharing' target='_blank'>
                     Resume
                   </Link>
                 </li>
@@ -160,12 +160,16 @@ export default function Home() {
           "Developed an online recipe book application with a team that takes in voice input to generate recipes to then store for later use",
           ["Multi Device Functionality through MongoDB", "Voice input to generate recipe based off of breakfast, lunch, or dinner and current ingredients", "Save and edit generated recipes", "Leverages DALL-E API to generate images of recipes to enhance user experience"],
           "Java, JavaFx, MongoDB, Whisper API, OpenAI API, DALL-E API",
-          ""
+          "https://github.com/ucsd-cse110-fa23/cse-110-project-team-31"
           )}</div>
           
-          <div className='m-auto'>{cardFlip("", "Fortune Hut Web App", "Worked to improve an existing app by adding online funcitonality and a better developer experience with documentation, testing, and applying a refactor to split the backend and frontend of the code base with a MVC pattern", [], "Javascript, HTML, CSS, MongoDB, Express, Jest", "")}</div>
+          <div className='m-auto'>{cardFlip("", "Fortune Hut Web App", "Worked to improve an existing app by adding online funcitonality and a better developer experience with documentation, testing, and applying a refactor to split the backend and frontend of the code base with a MVC pattern",
+          ["Adding MulktiDevice Functionality to save fortunes and login anywhere","Set Up Testing With Jest", "Use Github Actions to set up a CI/CD Pipeline to automate documentation, tests, and seting up the server", "Refactor Code Base to fit Model View Controller pattern"], 
+          "Javascript, HTML, CSS, Node.js, MongoDB, Express, Jest", 
+          "https://github.com/MichinoriW/cse112-group9"
+          )}</div>
 
-          <div className='m-auto'>{cardFlip("", "Huffman Tree Encoding and Decoding", "", [],"", "")}</div>
+          <div className='m-auto'>{cardFlip("", "Huffman Tree Encoding and Decoding", "Exploring how to encrypt and decrypt data from Cse 100 at UCSD which focuses on Data Structures. Final Project in making a Huffman Tree to Encode a text file into binary and decode back into the original message.", [],"C++", "")}</div>
         </div>
 
         {/*
