@@ -142,38 +142,46 @@ export default function Home() {
               </div>
               <Image className="content-end mr-40" draggable="false" src={logo} alt={''}></Image>
             </div>
-           
-            
           </div>
         </div>
 
         {/*
           * Empty Space 
           */}
-
-      <div className='  dark:bg-gray-900 min-h-screen'></div>
+        <div className='dark:bg-gray-900 h-80'></div>
+   
 
         {/*
           * Projects 
           */}
-        <div className=' flex dark:bg-gray-900 h-screen' id='projects'>
-          <div className='m-auto'>{cardFlip("", "PantryPal App", 
-          "Developed an online recipe book application with a team that takes in voice input to generate recipes to then store for later use",
-          ["Multi Device Functionality through MongoDB", "Voice input to generate recipe based off of breakfast, lunch, or dinner and current ingredients", "Save and edit generated recipes", "Leverages DALL-E API to generate images of recipes to enhance user experience"],
-          "Java, JavaFx, MongoDB, Whisper API, OpenAI API, DALL-E API",
-          "https://github.com/ucsd-cse110-fa23/cse-110-project-team-31"
-          )}</div>
+        <div className='dark:bg-gray-900 h-screen' id='projects'>
           
-          <div className='m-auto'>{cardFlip("", "Fortune Hut Web App", "Worked to improve an existing app by adding online funcitonality and a better developer experience with documentation, testing, and applying a refactor to split the backend and frontend of the code base with a MVC pattern",
-          ["Adding MulktiDevice Functionality to save fortunes and login anywhere","Set Up Testing With Jest", "Use Github Actions to set up a CI/CD Pipeline to automate documentation, tests, and seting up the server", "Refactor Code Base to fit Model View Controller pattern"], 
-          "Javascript, HTML, CSS, Node.js, MongoDB, Express, Jest", 
-          "https://github.com/MichinoriW/cse112-group9"
-          )}</div>
+          <div className='py-20 font-bold text-teal-400  px-20 cursor-default' >
+                <h1 className='text-5xl'>Projects:</h1>
+          </div>
+          
+          <div className='flex'>
+            <div className='m-auto'>{cardFlip("", "PantryPal App", 
+            "Developed an online recipe book application with a team that takes in voice input to generate recipes to then store for later use",
+            ["Multi Device Functionality through MongoDB", "Voice input to generate recipe based off of breakfast, lunch, or dinner and current ingredients", "Save and edit generated recipes", "Leverages DALL-E API to generate images of recipes to enhance user experience"],
+            "Java, JavaFx, MongoDB, Whisper API, OpenAI API, DALL-E API",
+            "https://github.com/ucsd-cse110-fa23/cse-110-project-team-31"
+            )}
+            </div>
+            
+            <div className='m-auto'>{cardFlip("", "Fortune Hut Web App", "Worked to improve an existing app by adding online funcitonality and a better developer experience with documentation, testing, and applying a refactor to split the backend and frontend of the code base with a MVC pattern",
+            ["Adding MulktiDevice Functionality to save fortunes and login anywhere","Set Up Testing With Jest", "Use Github Actions to set up a CI/CD Pipeline to automate documentation, tests, and seting up the server", "Refactor Code Base to fit Model View Controller pattern"], 
+            "Javascript, HTML, CSS, Node.js, MongoDB, Express, Jest", 
+            "https://github.com/MichinoriW/cse112-group9"
+            )}
+            </div>
 
-          <div className='m-auto'>{cardFlip("", "Huffman Tree Encoding and Decoding", "Exploring how to encrypt and decrypt data from Cse 100 at UCSD which focuses on Data Structures. Final Project in making a Huffman Tree to Encode a text file into binary and decode back into the original message.",
-           ["Developed an efficient Huffman Tree-based encoder and decoder for message encryption and decryption.", "Implemented the construction of a Huffman Tree by analyzing the frequency of each character in the input message.", "Optimal encoding of characters with variable-length codes.", "implimented various datascructures and modieified to be more memory efficient"],
-           "C++", 
-           "#")}</div>
+            <div className='m-auto'>{cardFlip("", "Huffman Tree Encoding and Decoding", "Exploring how to encrypt and decrypt data from Cse 100 at UCSD which focuses on Data Structures. Final Project in making a Huffman Tree to Encode a text file into binary and decode back into the original message.",
+            ["Developed an efficient Huffman Tree-based encoder and decoder for message encryption and decryption.", "Implemented the construction of a Huffman Tree by analyzing the frequency of each character in the input message.", "Optimal encoding of characters with variable-length codes.", "implimented various datascructures and modieified to be more memory efficient"],
+            "C++", 
+            "#")}
+            </div>
+          </div>
         </div>
 
 
