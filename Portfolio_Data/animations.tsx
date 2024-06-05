@@ -42,9 +42,10 @@ export function cardFlip(image: string, front: string, about : string, features 
                     <li>{features[3]}</li>
                   </ol>
                 </div>
-
-                <Link href='google.com' target='_blank'>link</Link>
               </div>
+
+              <Link href={link} className='mt-96 transition duration-200 ease-in-out bg-gradient-to-r from-teal-600 to-emerald-400 text-white px-4 py-2 rounded transform hover:scale-110 hover:text-gray-500' target='_blank'>Github Link!</Link>
+            
             </div>
     </div>
   )

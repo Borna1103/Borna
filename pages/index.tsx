@@ -169,7 +169,10 @@ export default function Home() {
           "https://github.com/MichinoriW/cse112-group9"
           )}</div>
 
-          <div className='m-auto'>{cardFlip("", "Huffman Tree Encoding and Decoding", "Exploring how to encrypt and decrypt data from Cse 100 at UCSD which focuses on Data Structures. Final Project in making a Huffman Tree to Encode a text file into binary and decode back into the original message.", [],"C++", "")}</div>
+          <div className='m-auto'>{cardFlip("", "Huffman Tree Encoding and Decoding", "Exploring how to encrypt and decrypt data from Cse 100 at UCSD which focuses on Data Structures. Final Project in making a Huffman Tree to Encode a text file into binary and decode back into the original message.",
+           ["Developed an efficient Huffman Tree-based encoder and decoder for message encryption and decryption.", "Implemented the construction of a Huffman Tree by analyzing the frequency of each character in the input message.", "Optimal encoding of characters with variable-length codes.", "implimented various datascructures and modieified to be more memory efficient"],
+           "C++", 
+           "")}</div>
         </div>
 
         {/*
