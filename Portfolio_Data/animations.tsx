@@ -51,9 +51,4 @@ export function cardFlip(image: string, front: string, about : string, features 
   )
 }
 
-export function projectdots() {
-
-        
-        
-    }
 

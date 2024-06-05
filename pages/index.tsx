@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import {Data} from '../Portfolio_Data/data'
-import {cardFlip, projectdots} from '../Portfolio_Data/animations'
+import {cardFlip} from '../Portfolio_Data/animations'
 import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll'
 import React, { useState, useEffect} from 'react'
 import logo from "public/Logo.png"
@@ -172,9 +172,22 @@ export default function Home() {
           <div className='m-auto'>{cardFlip("", "Huffman Tree Encoding and Decoding", "Exploring how to encrypt and decrypt data from Cse 100 at UCSD which focuses on Data Structures. Final Project in making a Huffman Tree to Encode a text file into binary and decode back into the original message.",
            ["Developed an efficient Huffman Tree-based encoder and decoder for message encryption and decryption.", "Implemented the construction of a Huffman Tree by analyzing the frequency of each character in the input message.", "Optimal encoding of characters with variable-length codes.", "implimented various datascructures and modieified to be more memory efficient"],
            "C++", 
-           "")}</div>
+           "#")}</div>
         </div>
 
+
+
+        <div className='  dark:bg-gray-900 min-h-screen'>
+        <div className='py-20 font-bold text-teal-400  px-20 min-h-screen cursor-default' >
+            <div className='flex justify-between'> 
+              <div>
+                <h1 className='text-5xl'>What Am I Currently Working On?</h1>
+                
+              </div>
+            </div>
+          </div>
+
+        </div>
         {/*
          * Skills
                 */}
