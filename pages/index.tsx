@@ -1,13 +1,11 @@
 import Head from 'next/head'
-import Link from 'next/link'
-import {Data} from '../Portfolio_Data/data'
-import {cardFlip} from '../Portfolio_Data/animations'
-import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll'
+import {animateScroll as scroll } from 'react-scroll'
 import React, { useState, useEffect} from 'react'
 import logo from "public/Logo.png"
-import workingOn from "public/workingOn.png"
-import{AiFillLinkedin, AiFillGithub, AiFillCloud} from 'react-icons/ai';
-import Image from 'next/image'
+import Image from 'next/image';
+import Projects from "./myProjects";
+import Nav from "./myNav";
+import Work from "./myWork";
 
 
 /*
@@ -15,7 +13,6 @@ import Image from 'next/image'
 */
 
 export default function Home() {
-  let data = new Data();
 
   /*
   * Scrolling
@@ -43,37 +40,6 @@ export default function Home() {
         scroll.scrollToTop({ smooth: true });
     };
 
-  /*
-  * Project
-  */
-  const numberOfProjects = data.projects.length;
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const goToProject = (index: React.SetStateAction<number>) => {
-    setCurrentIndex(index);
-  };
-
-  const prevProject = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex(currentIndex - 1);
-    }
-  };
-
-  
-  const nextProject = () => {
-    if (currentIndex < numberOfProjects - 1) {
-      setCurrentIndex(currentIndex + 1);
-    }
-  };
-  
-  const renderProjectDots = () => {
-    return data.projects.map((project, index) => (
-      <button
-        key={index}
-        className={`dot ${index === currentIndex ? 'active' : ''}`}
-        onClick={() => goToProject(index)}
-      ></button>
-    ));
-  };
 
 
   /*
@@ -94,38 +60,9 @@ export default function Home() {
        * Main Page Content
        */} 
 
-      <main>
+      <main >
 
-          {/* 
-            * Navigation Bar
-            */} 
-        <div>
-          <nav className={`flex flex-wrap justify-between bg-slate-800 px-10 w-full py-8 `}>
-              <ul className='flex flex-wrap items-center cursor-pointer'>
-                <ScrollLink to='home' smooth={true} duration={500}><AiFillCloud className='text-4xl text-teal-400 transition duration-200 ease-in-out hover:text-emerald-400 transform hover:scale-110'/></ScrollLink>
-                <li className='ml-10 transition duration-200 ease-in-out text-white hover:text-emerald-400 transform hover:scale-110'> 
-                  <ScrollLink to='home' smooth={true} duration={500}>Home</ScrollLink>
-                </li>
-                <li className='ml-10 transition duration-200 ease-in-out text-white hover:text-emerald-400 transform hover:scale-110'>
-                  <ScrollLink to='projects' smooth={true} duration={500}>Projects</ScrollLink>
-                </li>
-                <li className='ml-10 transition duration-200 ease-in-out text-white hover:text-emerald-400 transform hover:scale-110'>
-                  <ScrollLink to='skills' smooth={true} duration={500}>Skills</ScrollLink>
-                </li>
-              </ul>
-              <ul className="flex items-center">
-                <li className='text-4xl flex gap-10 text-white ml-10 content-end'>
-                  <Link href="https://github.com/Borna1103" target="_blank"><AiFillGithub  className="transition duration-200 ease-in-out text-white hover:text-black transform hover:scale-110"/></Link>
-                  <Link href="https://www.linkedin.com/in/borna-hemmaty/" target="_blank"><AiFillLinkedin className='transition duration-200 ease-in-out text-white hover:text-blue-500 transform hover:scale-110'/></Link>
-                </li>
-                <li>
-                  <Link className=" transition duration-200 ease-in-out bg-gradient-to-r from-teal-600 to-emerald-400 text-white px-4 py-2 rounded ml-10 transform hover:scale-110 hover:text-gray-500" href='https://drive.google.com/file/d/1arGy_pvBLR4m4TtuUIRyBAPaFWFlRV9q/view?usp=sharing' target='_blank'>
-                    Resume
-                  </Link>
-                </li>
-              </ul>
-          </nav>
-        </div>
+        <Nav />
 
         {/*
           * Page Introduction (Home page) 
@@ -133,72 +70,44 @@ export default function Home() {
        
         <div className='flex-grow bg-gray-900' id='home'>
           {/* Content */}
-          <div className='py-20 font-bold text-teal-400  px-20 min-h-screen cursor-default' >
+          <div className='py-20 font-bold text-teal-400 px-48 min-h-screen cursor-default' >
             <div className='flex justify-between'> 
               <div>
-                <h1 className='text-6xl'>Borna Hemmaty,</h1>
-                <h1 className='text-5xl py-6'>Im a Developer</h1>
-                <h2 className='ml-2 mt-5 italic'>Learning to be a better developer!</h2>
+                <h1 className='text-9xl'>Borna</h1>
+                <h1 className='text-9xl py-6'>Hemmaty</h1>
+                <h2 className='text-2xl ml-2 mt-5 italic'>Learning to be a better developer!</h2>
               </div>
-              <Image className="content-end mr-40" draggable="false" src={logo} alt={''}></Image>
+              <Image className="content-end" draggable="false" src={logo} alt={''}></Image>
             </div>
           </div>
         </div>
-
-        {/*
-          * Empty Space 
-          */}
-        <div className='bg-gray-900 h-80'></div>
-   
 
         {/*
           * Projects 
           */}
         <div className='bg-gray-900 h-screen' id='projects'>
           
-          <div className='py-20 font-bold text-teal-400  px-20 cursor-default' >
-                <h1 className='text-5xl'>Projects:</h1>
-          </div>
           
-          <div className='flex'>
-            <div className='m-auto'>{cardFlip("", "PantryPal App", 
-            "Developed an online recipe book application with a team that takes in voice input to generate recipes to then store for later use",
-            ["Multi Device Functionality through MongoDB", "Voice input to generate recipe based off of breakfast, lunch, or dinner and current ingredients", "Save and edit generated recipes", "Leverages DALL-E API to generate images of recipes to enhance user experience"],
-            "Java, JavaFx, MongoDB, Whisper API, OpenAI API, DALL-E API",
-            "https://github.com/ucsd-cse110-fa23/cse-110-project-team-31"
-            )}
-            </div>
+          <div className='relative px-4 sm:px-8 lg:px-12 '></div>
             
-            <div className='m-auto'>{cardFlip("", "Fortune Hut Web App", "Worked to improve an existing app by adding online funcitonality and a better developer experience with documentation, testing, and applying a refactor to split the backend and frontend of the code base with a MVC pattern",
-            ["Adding MulktiDevice Functionality to save fortunes and login anywhere","Set Up Testing With Jest", "Use Github Actions to set up a CI/CD Pipeline to automate documentation, tests, and seting up the server", "Refactor Code Base to fit Model View Controller pattern"], 
-            "Javascript, HTML, CSS, Node.js, MongoDB, Express, Jest", 
-            "https://github.com/MichinoriW/cse112-group9"
-            )}
-            </div>
-
-            <div className='m-auto'>{cardFlip("", "Huffman Tree Encoding and Decoding", "Exploring how to encrypt and decrypt data from Cse 100 at UCSD which focuses on Data Structures. Final Project in making a Huffman Tree to Encode a text file into binary and decode back into the original message.",
-            ["Developed an efficient Huffman Tree-based encoder and decoder for message encryption and decryption.", "Implemented the construction of a Huffman Tree by analyzing the frequency of each character in the input message.", "Optimal encoding of characters with variable-length codes.", "implimented various datascructures and modieified to be more memory efficient"],
-            "C++", 
-            "#")}
-            </div>
-          </div>
-        </div>
-
-
-
-        <div className='  bg-gray-900 min-h-screen'>
-          <div className='py-20 font-bold text-teal-400  px-20 min-h-screen cursor-default' >
-            <h1 className='text-5xl mb-20'>What Am I Currently Working On?</h1>
-            <div className='flex '>
-                <div>
-                  <h2 className='text-xl mt-10 ml-10 max-w-2xl mb-20'> I am currently working on a 2D Game used as a portfolio. Using Kaboom which is a package for javascript, I want to create a 2D platformer similar to Mario.</h2>
-                  <Link href="https://github.com/Borna1103/2D-Portfolio" className='ml-10 transition duration-200 ease-in-out bg-gradient-to-r from-teal-600 to-emerald-400 text-white px-4 py-2 rounded transform hover:scale-110 hover:text-gray-500' target='_blank'>Github Link!</Link>
+            <div className='mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2'>
+              <div className='space-y-10 lg:pl-16 xl:pl-48 '>
+                <div className='text-center py-10 font-bold text-teal-400 cursor-default' >
+                    <h1 className='text-7xl'>Projects</h1>
                 </div>
-              <Image className="content-end ml-20 mt-10" draggable="false" src={workingOn} alt={''}  width={1000} quality={100}></Image>
-            </div>
-          </div>
+                  <Projects />
+              
+              </div>
+              <div className='space-y-10 lg:pr-16 xl:pr-48 lg:pl-16 xl:pl-24'>
+                <div className='text-center py-10 font-bold text-teal-400 cursor-default' >
+                    <h1 className='text-7xl'>Experiences</h1>
+                </div>
+                <Work />
 
+              </div>
+            </div>
         </div>
+       
         {/*
          * Skills
                 */}
