@@ -39,7 +39,9 @@ canvas {
   height: 75vh;
 }
 
-
+.classes {
+  height: 35vh;
+}
 
 .no-scrollbar::-webkit-scrollbar {
   display: none;

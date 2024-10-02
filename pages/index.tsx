@@ -1,12 +1,13 @@
 import Head from 'next/head'
 import {animateScroll as scroll } from 'react-scroll'
 import React, { useState, useEffect} from 'react'
-import logo from "public/Logo.png"
+import logo from "public/Logo.png";
 import Image from 'next/image';
 import Projects from "./myProjects";
 import Nav from "./myNav";
 import Work from "./myWork";
-
+import Classes from "./myClasses"
+import About from "./myAbout"
 
 /*
  * Start
@@ -82,10 +83,12 @@ export default function Home() {
           </div>
         </div>
 
+
+        <About/>
         {/*
           * Projects 
           */}
-        <div className='bg-gray-900 h-screen' id='projects'>
+        <div className='bg-gray-900 min-h-screen' id='projects'>
           
           
           <div className='relative px-4 sm:px-8 lg:px-12 '></div>
@@ -98,12 +101,14 @@ export default function Home() {
                   <Projects />
               
               </div>
-              <div className='space-y-10 lg:pr-16 xl:pr-48 lg:pl-16 xl:pl-24'>
-                <div className='text-center py-10 font-bold text-teal-400 cursor-default' >
-                    <h1 className='text-7xl'>Experiences</h1>
+              <div className='grid grid-rows-2'>
+                <div className=' space-y-10 gap-y-10 lg:pr-16 xl:pr-48 lg:pl-16 xl:pl-24'>
+                  <div className='text-center py-10 font-bold text-teal-400 cursor-default' >
+                      <h1 className='text-7xl'>Experiences</h1>
+                  </div>
+                  <Work />
+                  <Classes />
                 </div>
-                <Work />
-
               </div>
             </div>
         </div>

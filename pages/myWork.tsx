@@ -27,7 +27,6 @@ export default function Work() {
                 </li>
                ))} 
             </ol>
-
         </div>
     )
 }
