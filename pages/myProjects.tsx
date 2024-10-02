@@ -15,7 +15,7 @@ export default function Projects() {
 
                     <h2 className='text-base font-semibold tracking-tight text-white'>
                         <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-700/50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl "></div>
-                        <a href={project.link} target='_blank'>
+                        <a href={project.link} target='_blank' rel="noreferrer">
                             <span className="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"></span>
                             <span className="relative z-10">{project.name}</span>
                         </a> 
