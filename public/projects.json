@@ -1,5 +1,6 @@
 [
     {
+        "id" : 1,
         "name": "PantryPal",
         "about": "Developed an online recipe book application with a team that takes in voice input to generate recipes to then store for later use",
         "time": "September 2023 - December 2023",
@@ -8,6 +9,7 @@
     },
 
     {
+        "id" : 2,
         "name": "Fortune Hut Web App",
         "about": "Worked to improve an existing app by adding online funcitonality and a better developer experience with documentation, testing, and applying a refactor to split the backend and frontend of the code base with a MVC pattern",
         "time": "September 2023 - December 2023",
@@ -16,6 +18,7 @@
     },
 
     {
+        "id" : 3,
         "name": "Huffman Tree Encoding and Decoding",
         "about": "Exploring how to encrypt and decrypt data from Cse 100 at UCSD which focuses on Data Structures. Final Project in making a Huffman Tree to Encode a text file into binary and decode back into the original message.",
         "time": "Febuary 2023",
@@ -24,6 +27,7 @@
     },
 
     {
+        "id" : 4,
         "name": "2D-Portfolio",
         "about": "Created a mario-like web browser game used to showcase as a portfolio using kaboom.js a javascript library, sprites and vanilla html/css",
         "time": "July 2024 - Present",
@@ -32,6 +36,7 @@
     },
 
     {
+        "id" : 5,
         "name": "Capstone Project",
         "about": "Team capstone project creating a wireless USB hub with a Raspberry pi zero along with outer shell modeled in blender. Researched logistics to create a power efficient USB hub and personally worked with the physical model, modeling of the shell and research of software and hardware.",
         "time": "July 2024 - Present",
@@ -40,6 +45,7 @@
     },
 
     {
+        "id" : 6,
         "name": "UCSD Climable Trees",
         "about": "Over the summer project to create a website that showcases all climable trees at UCSD and their difficulty",
         "time": "July 2024 - Present",

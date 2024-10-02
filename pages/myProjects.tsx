@@ -5,7 +5,7 @@ export default function Projects() {
         <div className='rounded-2xl borderp-6 border-zinc-100 border-zinc-700/40 bg-gray-800 p-10 overflow-y-auto no-scrollbar project'>
             <div className='flex flex-col gap-16'>
                 {data.map((project) => (
-                <div className='group relative flex flex-col items-start'>
+                <div key={project.id} className='group relative flex flex-col items-start'>
                     <time className='relative z-10 order-first mb-3 flex items-center text-sm text-zinc-500 pl-3.5'>
                         <span className='absolute inset-y-0 left-0 flex items-center'>
                             <span className='h-4 w-0.5 rounded-full bg-zinc-500'></span>
