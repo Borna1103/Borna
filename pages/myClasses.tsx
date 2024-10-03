@@ -1,4 +1,4 @@
-import data from "../public/classes.json";
+import data from "../data/classes.json";
 
 export default function Classes() {
     return (

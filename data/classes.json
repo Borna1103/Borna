@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "name": "Software Engineering",
+        "time": "Junior Year",
+        "skills": "javafx, java, OpenAI Api, Wisper API, Dalli API"
+    },
+    {
+        "id": 2,
+        "name": "Design and Analysis of Algorithms",
+        "time": "Junior Year",
+        "skills": "Algorithms"
+    },
+    {
+        "id": 3,
+        "name": "Software Tools and Techniques Laboratory",
+        "time": "Freshman Year",
+        "skills": "Bash"
+    },
+    {
+        "id": 4,
+        "name": "Discrete Mathematics",
+        "time": "Freshman Year",
+        "skills": "Discrete Math"
+    },
+    {
+        "id": 5,
+        "name": "Mathematics for Algorithms and Systems",
+        "time": "Sophmore Year",
+        "skills": "Discrete Math"
+    },
+    {
+        "id": 6,
+        "name": "Theory of Computability",
+        "time": "Junior Year",
+        "skills": "Algorithms, Turing Machine"
+    },
+    {
+        "id": 7,
+        "name": "Programming Languages: Principles and Paradigm",
+        "time": "Junior Year",
+        "skills": "Haskle"
+    },
+    {
+        "id": 8,
+        "name": "Advanced-Data Structures",
+        "time": "Sophmore Year",
+        "skills": "C++, Data Structures, Encoding and Decoding"
+    },
+    {
+        "id": 9,
+        "name": "Advanced Software Engineering",
+        "time": "Junior Year",
+        "skills": "HTML, CSS, JavaScript, Github"
+    }
+]

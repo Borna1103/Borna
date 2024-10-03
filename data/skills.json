@@ -1,0 +1,54 @@
+[
+    {
+        "id": 1,
+        "skill": "Java"
+    },
+    {
+        "id": 2,
+        "skill": "Python"
+    },
+    {
+        "id": 3,
+        "skill": "C/C++"
+    },
+    {
+        "id": 4,
+        "skill": "C#"
+    },
+    {
+        "id": 5,
+        "skill": "LaTeX"
+    },
+    {
+        "id": 6,
+        "skill": "HTML"
+    },
+    {
+        "id": 7,
+        "skill": "CSS"
+    },
+    {
+        "id": 8,
+        "skill": "TypeScript"
+    },
+    {
+        "id": 9,
+        "skill": "R"
+    },
+    {
+        "id": 10,
+        "skill": "Haskle"
+    },
+    {
+        "id": 11,
+        "skill": "Javascript"
+    },
+    {
+        "id": 12,
+        "skill": "React"
+    },
+    {
+        "id": 13,
+        "skill": "Tailwind Css"
+    }
+]

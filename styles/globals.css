@@ -32,15 +32,15 @@ canvas {
 }
 
 .work {
-  height: 30vh;
+  height: 320px;
 } 
 
 .project {
-  height: 75vh;
+  height: 740px;
 }
 
 .classes {
-  height: 35vh;
+  height: 380px;
 }
 
 .no-scrollbar::-webkit-scrollbar {
@@ -90,4 +90,8 @@ canvas {
 .fadeInDown {
   -webkit-animation-name: fadeInDown;
   animation-name: fadeInDown;
+}
+
+.animation-pause {
+  animation-play-state: paused;
 }
