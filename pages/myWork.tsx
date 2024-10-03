@@ -1,5 +1,6 @@
 import data from "../public/work.json"
 import Image from 'next/image';
+import {prefix} from './prefix';
 
 export default function Work() {
     return (
@@ -17,7 +18,7 @@ export default function Work() {
                {data.map((work) => (
                 <li key={work.id} className="flex gap-4">
                     <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-                        <Image alt="" loading="lazy" width="32" height="32" decoding="async" data-nimg="1" className="rounded-full h-7 w-7 bg-transparent" src={work.logo}/>
+                        <Image alt="" loading="lazy" width="32" height="32" decoding="async" data-nimg="1" className="rounded-full h-7 w-7 bg-transparent" src={`${prefix}${work.logo}`}/>
                     </div>
                     <div className="flex flex-auto flex-wrap gap-x-2">
                         <h2 className="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">{work.name}</h2>

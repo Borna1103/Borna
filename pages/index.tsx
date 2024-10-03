@@ -74,9 +74,9 @@ export default function Home() {
           <div className='py-20 font-bold text-teal-400 px-48 min-h-screen cursor-default' >
             <div className='flex justify-between'> 
               <div>
-                <h1 className='text-9xl'>Borna</h1>
-                <h1 className='text-9xl py-6'>Hemmaty</h1>
-                <h2 className='text-2xl ml-2 mt-5 italic'>Learning to be a better developer!</h2>
+                <h1 className='lg:text-9xl sm:text-lg'>Borna</h1>
+                <h1 className='lg:text-9xl py-6 sm:text-lg'>Hemmaty</h1>
+                <h2 className='lg:text-2xl ml-2 mt-5 italic sm:text-base'>Learning to be a better developer!</h2>
               </div>
               <Image className="content-end" draggable="false" src={logo} alt={''}></Image>
             </div>
