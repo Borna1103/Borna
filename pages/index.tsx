@@ -72,7 +72,7 @@ export default function Home() {
         <div className='flex-grow bg-gray-900' id='home'>
           {/* Content */}
           <div className='py-20 font-bold text-teal-400 px-48 min-h-screen cursor-default' >
-            <div className='flex justify-between'> 
+            <div className='flex justify-between animated fadeInDown'> 
               <div>
                 <h1 className='lg:text-9xl sm:text-lg'>Borna</h1>
                 <h1 className='lg:text-9xl py-6 sm:text-lg'>Hemmaty</h1>
@@ -85,6 +85,8 @@ export default function Home() {
 
 
         <About/>
+
+        <section className="h-52 bg-gradient-to-r bg-gray-900 py-12 px-4"></section>
         {/*
           * Projects 
           */}
