@@ -1,8 +1,10 @@
 import data from "../public/work.json"
 import Image from 'next/image';
-import {prefix} from './prefix';
 
 export default function Work() {
+
+    const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
     return (
         <div className='rounded-2xl borderp-6 border-zinc-100 border-zinc-700/40 bg-gray-800 p-6 pl-8 overflow-y-auto no-scrollbar work'>
             <h2 className="flex text-base font-semibold tracking-tight text-white">
