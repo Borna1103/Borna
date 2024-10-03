@@ -11,6 +11,28 @@ import About from "./myAbout"
 import Footer from "./myFooter"
 
 export default function Home() {
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(false);
+
+  const handleScroll = () => {
+    const currentScrollPos = window.pageYOffset;
+    setVisible(currentScrollPos < prevScrollPos);
+    if(currentScrollPos == 0){
+      setVisible(false);
+    }
+    setPrevScrollPos(currentScrollPos);
+  };
+
+  useEffect(() => {
+      window.addEventListener('scroll', handleScroll);
+      return () => {
+      window.removeEventListener('scroll', handleScroll);
+      };
+  }, [prevScrollPos]);
+
+  const scrollToTop = () => {
+        scroll.scrollToTop({ smooth: true });
+    };
  
   return (
     <div>
@@ -30,7 +52,7 @@ export default function Home() {
               <div>
                 <h1 className='lg:text-9xl sm:text-4xl'>Borna</h1>
                 <h1 className='lg:text-9xl py-6 sm:text-4xl'>Hemmaty</h1>
-                <h2 className='lg:text-2xl ml-2 mt-5 italic sm:text-sm'>"Our greatest weakness lies in giving up. The most certain way to succeed is always to try just one more time." -Thomas A. Edison</h2>
+                <h2 className='lg:text-2xl ml-2 mt-5 italic sm:text-sm'> &quot;Our greatest weakness lies in giving up. The most certain way to succeed is always to try just one more time.&quot;</h2>
                 <h2 className='lg:text-2xl ml-2 mt-5 italic sm:text-sm'>-Thomas A. Edison</h2>
               </div>
               <Image className='content-end sm:ml-16 lg:ml-24' draggable="false" src={logo} alt={''}></Image>
@@ -67,6 +89,15 @@ export default function Home() {
         <section className='h-52 bg-gradient-to-r bg-gray-900 py-12 px-4'></section>
 
         <Footer/>
+
+        {/*
+         * Back to top Button
+                */}
+        <button className={`fixed bottom-4 right-4 bg-gray-800 text-white p-2 rounded-full transition-opacity ${visible ? 'opacity-100' : 'opacity-0'}`} onClick={scrollToTop}>
+          <svg className='w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg'>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+          </svg>
+        </button>
       </main>
       
     </div>
