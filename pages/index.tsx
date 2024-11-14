@@ -4,12 +4,12 @@ import logo from "public/Logo.png";
 import Image from 'next/image';
 
 // Components
-import Projects from "./myProjects";
-import Nav from "./myNav";
-import Work from "./myWork";
-import Classes from "./myClasses"
-import About from "./myAbout"
-import Footer from "./myFooter"
+import Projects from "../components/myProjects";
+import Nav from "../components/myNav";
+import Work from "../components/myWork";
+import Classes from "../components/myClasses"
+import About from "../components/myAbout"
+import Footer from "../components/myFooter"
 
 export default function Home() {
 
