@@ -1,6 +1,6 @@
 import data from "../data/work.json"
 import Image from 'next/image';
-
+import React from 'react'
 export default function Work() {
 
 

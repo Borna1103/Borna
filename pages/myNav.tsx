@@ -11,10 +11,10 @@ export default function Nav() {
                   <ScrollLink to='home' smooth={true} duration={500}>Home</ScrollLink>
                 </li>
                 <li className='ml-10 transition duration-200 ease-in-out text-white hover:text-emerald-400 transform hover:scale-110'>
-                  <ScrollLink to='projects' smooth={true} duration={500}>Projects</ScrollLink>
+                  <ScrollLink to='about' smooth={true} duration={500}>About</ScrollLink>
                 </li>
                 <li className='ml-10 transition duration-200 ease-in-out text-white hover:text-emerald-400 transform hover:scale-110'>
-                  <ScrollLink to='skills' smooth={true} duration={500}>Skills</ScrollLink>
+                  <ScrollLink to='projects' smooth={true} duration={500}>Projects</ScrollLink>
                 </li>
               </ul>
               <ul className="flex items-center">

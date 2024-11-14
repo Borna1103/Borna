@@ -1,8 +1,9 @@
 import Head from 'next/head'
-import {animateScroll as scroll } from 'react-scroll'
-import React, { useState, useEffect} from 'react'
+import React from 'react'
 import logo from "public/Logo.png";
 import Image from 'next/image';
+
+// Components
 import Projects from "./myProjects";
 import Nav from "./myNav";
 import Work from "./myWork";
@@ -16,6 +17,7 @@ export default function Home() {
     <div>
       <Head>
         <title>Borna Hemmaty Portfolio</title>
+        <link rel="icon" href="Logo.png" />
         <meta name="description" content="Computer scientist Portfolio"/>
       </Head>
 
@@ -38,8 +40,9 @@ export default function Home() {
           </div>
         </div>
 
-
+      <div id='about'>
         <About/>
+      </div>
 
         <section className="h-52 bg-gradient-to-r bg-gray-900 py-12 px-4"></section>
       
