@@ -52,5 +52,17 @@
         "name": "Advanced Software Engineering",
         "time": "Junior Year",
         "skills": "HTML, CSS, JavaScript, Github"
+    },
+    {
+        "id": 10,
+        "name": "AI: Probablistics",
+        "time": "Senior Year",
+        "skills": "Algorithms with Probability"
+    },
+    {
+        "id": 11,
+        "name": "Computer Vision",
+        "time": "Senior Year",
+        "skills": "Python, Numpy, Matrix"
     }
 ]

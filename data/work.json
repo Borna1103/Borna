@@ -12,5 +12,12 @@
         "logo": "/triton.jpg",
         "time": "September 2024 - Present",
         "position": "Proctor"
+    },
+    {
+        "id" : 3,
+        "name": "GBCS Backend Software Developer",
+        "logo": "/triton.jpg",
+        "time": "September 2024 - Present",
+        "position": "Intern"
     }
 ]
