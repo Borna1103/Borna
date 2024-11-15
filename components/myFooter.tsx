@@ -9,19 +9,13 @@ export default function Footer() {
                     </a>
                     <ul className="flex flex-wrap items-center mb-6 text-sm font-medium  sm:mb-0 text-gray-400">
                         <li>
-                            <a className="hover:underline me-4 md:me-6"> 
-                                <ScrollLink to='home' smooth={true} duration={500}>Home</ScrollLink> 
-                            </a>
+                            <ScrollLink className="hover:underline me-4 md:me-6" to='home' smooth={true} duration={500}>Home</ScrollLink> 
                         </li>
                         <li>
-                            <a  className="hover:underline me-4 md:me-6">
-                            <ScrollLink to='about' smooth={true} duration={500}>About</ScrollLink>
-                            </a>
+                            <ScrollLink className="hover:underline me-4 md:me-6" to='about' smooth={true} duration={500}>About</ScrollLink>
                         </li>
                         <li>
-                            <a  className="hover:underline me-4 md:me-6">
-                            <ScrollLink to='projects' smooth={true} duration={500}>Projects</ScrollLink>
-                            </a>
+                            <ScrollLink className="hover:underline me-4 md:me-6" to='projects' smooth={true} duration={500}>Projects</ScrollLink>
                         </li>
                         <li>
                             <a  className="hover:underline">Contact</a>
