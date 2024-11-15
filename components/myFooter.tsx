@@ -1,3 +1,4 @@
+import { Link as ScrollLink } from 'react-scroll'
 export default function Footer() {
     return (
         <footer className=" shadow bg-gray-900 ">
@@ -8,16 +9,22 @@ export default function Footer() {
                     </a>
                     <ul className="flex flex-wrap items-center mb-6 text-sm font-medium  sm:mb-0 text-gray-400">
                         <li>
-                            <a href="#Home" className="hover:underline me-4 md:me-6">Home</a>
+                            <a className="hover:underline me-4 md:me-6"> 
+                                <ScrollLink to='home' smooth={true} duration={500}>Home</ScrollLink> 
+                            </a>
                         </li>
                         <li>
-                            <a href="#About" className="hover:underline me-4 md:me-6">About</a>
+                            <a  className="hover:underline me-4 md:me-6">
+                            <ScrollLink to='about' smooth={true} duration={500}>About</ScrollLink>
+                            </a>
                         </li>
                         <li>
-                            <a href="#Project" className="hover:underline me-4 md:me-6">Projects</a>
+                            <a  className="hover:underline me-4 md:me-6">
+                            <ScrollLink to='projects' smooth={true} duration={500}>Projects</ScrollLink>
+                            </a>
                         </li>
                         <li>
-                            <a href="#" className="hover:underline">Contact</a>
+                            <a  className="hover:underline">Contact</a>
                         </li>
                     </ul>
                 </div>
