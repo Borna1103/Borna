@@ -1,6 +1,9 @@
-import data from "../data/work.json"
+import data from "../data/work.json";
 import Image from 'next/image';
-import React from 'react'
+import React from 'react';
+import gbcs from 'public/images/gbcs.png';
+import triton from 'public/images/triton.jpg'
+import tys from 'public/images/tysCreative.jpeg'
 export default function Work() {
 
 
@@ -16,10 +19,23 @@ export default function Work() {
             </h2>
 
             <ol className="mt-6 space-y-4">
-               {data.map((work) => (
+               {data.map((work) => {
+                 let companyVariable
+                 if (work.logo === '/gbcs.png') {
+                    companyVariable = gbcs;
+                    } else if (work.logo === '/triton.jpg') {
+                    companyVariable = triton;
+                    }
+                    else if (work.logo === '/tysCreative.jpeg'){
+                        companyVariable = tys;
+                    }
+                    else{
+                        companyVariable = gbcs
+                    }
+                return (
                 <li key={work.id} className="flex gap-4">
                     <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-zinc-900/5 border border-zinc-700/50 bg-zinc-800 ring-0">
-                        <Image alt="" loading="lazy" width="32" height="32" decoding="async" data-nimg="1" className="rounded-full h-7 w-7 bg-transparent" src={'/images' +`${work.logo}`}/>
+                        <Image alt="" loading="lazy" width="32" height="32" decoding="async" data-nimg="1" className="rounded-full h-7 w-7 bg-transparent" src={companyVariable}/>
                     </div> 
                     <div className="flex flex-auto flex-wrap gap-x-2">
                         <h2 className="w-full flex-none text-sm font-medium text-zinc-100">{work.name}</h2>
@@ -27,7 +43,7 @@ export default function Work() {
                         <time className="ml-auto text-xs text-zinc-500">{work.time}</time>
                     </div>
                 </li>
-               ))} 
+               )})} 
             </ol>
         </div>
     )
