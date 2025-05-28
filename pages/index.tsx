@@ -25,49 +25,47 @@ export default function Home() {
 
         <Nav />
        
-        <div className='flex-grow bg-gray-900' id='home'>
+        <section className='flex-grow bg-gray-900' id='home'>
           {/* Content */}
-          <div className='py-20 font-bold text-teal-400 px-48 min-h-screen cursor-default' >
-            <div className='mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2 justify-between animated fadeInDown'> 
-              <div>
-                <h1 className='lg:text-9xl sm:text-4xl'>Borna</h1>
-                <h1 className='lg:text-9xl py-6 sm:text-4xl'>Hemmaty</h1>
-                <h2 className='lg:text-2xl ml-2 mt-5 italic sm:text-sm'> &quot;Our greatest weakness lies in giving up. The most certain way to succeed is always to try just one more time.&quot;</h2>
-                <h2 className='lg:text-2xl ml-2 mt-5 italic sm:text-sm'>-Thomas A. Edison</h2>
-              </div>
-              <Image className='content-end sm:ml-16 lg:ml-24' draggable="false" src={logo} alt={''}></Image>
+          <div className='md:py-20 py-10 font-bold text-teal-400 lg:px-48 px-10 md:min-h-screen h-auto cursor-default' >
+            <div className='mx-auto grid max-w-xl grid-cols-1 lg:gap-y-20 gap-y-8 lg:max-w-none sm:grid-cols-2  animated fadeInDown'> 
+              <ul>
+                <h1 className='md:text-7xl xl:text-9xl text-4xl'>Borna</h1>
+                <h1 className='md:text-7xl xl:text-9xl lg:py-6 py-2 text-4xl'>Hemmaty</h1>
+                <h2 className='md:text-xl xl:text-2xl ml-2 mt-5 italic text-sm'> &quot;Our greatest weakness lies in giving up. The most certain way to succeed is always to try just one more time.&quot;</h2>
+                <h2 className='md:text-xl xl:text-2xl ml-2 mt-5 italic text-sm'>-Thomas A. Edison</h2>
+              </ul>
+              <Image className=' w-52 md:w-80 xl:w-full sm:ml-10 md:ml-20 mx-auto ' draggable="false" src={logo} alt={''}></Image>
             </div>
           </div>
-        </div>
+        </section>
 
-      <div id='about'>
-        <About/>
-      </div>
+        <section id='about'>
+          <About/>
+        </section>
 
-        <section className="h-52 bg-gradient-to-r bg-gray-900 py-12 px-4"></section>
+        
       
-        <div className='bg-gray-900 min-h-screen ' id='projects'>
+        <section className='bg-gray-900 min-h-screen ' id='projects'>
           <div className='relative px-4 sm:px-8 lg:px-12 '></div>
             <div className='mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2'>
-              <div className='animated fadeInDown space-y-10 lg:pl-16 xl:pl-48 '>
-                <div className='text-center py-10 font-bold text-teal-400 cursor-default' >
-                    <h1 className='text-7xl'>Projects</h1>
-                </div>
+              <hgroup className='animated fadeInDown space-y-10 lg:pl-16 xl:pl-48 '>
+                
+                  <header className='text-center py-10 font-bold text-teal-400 cursor-default lg:text-7xl text-5xl'>Projects</header>
                   <Projects />
-              </div>
+              </hgroup>
               <div className='grid-rows-2'>
-                <div className='animated fadeInDown space-y-10  lg:pr-16 xl:pr-48 lg:pl-16 xl:pl-24'>
-                  <div className='text-center py-10 font-bold text-teal-400 cursor-default' >
-                      <h1 className='text-7xl'>Experiences</h1>
-                  </div>
+                <hgroup className='animated fadeInDown space-y-10  lg:pr-16 xl:pr-48 lg:pl-16 xl:pl-24'>
+                  <header className='text-center py-10 font-bold text-teal-400 cursor-default lg:text-7xl text-5xl'>Experiences</header>
+               
                   <Work />
                   <Classes />
-                </div>
+                </hgroup>
               </div>
             </div>
-        </div>
+        </section>
        
-        <section className='h-52 bg-gradient-to-r bg-gray-900 py-12 px-4'></section>
+       
 
         <Footer/>
 

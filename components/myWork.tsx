@@ -4,6 +4,7 @@ import React from 'react';
 import gbcs from 'public/images/gbcs.png';
 import triton from 'public/images/triton.jpg'
 import tys from 'public/images/tysCreative.jpeg'
+import origami from 'public/images/origami_air_logo.jpg'
 export default function Work() {
 
 
@@ -28,6 +29,9 @@ export default function Work() {
                     }
                     else if (work.logo === '/tysCreative.jpeg'){
                         companyVariable = tys;
+                    }
+                    else if( work.logo === '/origami_air_logo.jpg'){
+                        companyVariable = origami;
                     }
                     else{
                         companyVariable = gbcs

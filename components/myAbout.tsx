@@ -5,8 +5,7 @@ export default function About(){
         <section className=" bg-gradient-to-r from-teal-600 to-emerald-400 text-white py-12 px-4 text-center">
             <h2 className="text-2xl font-bold">About Me</h2>
             <p className="mt-4 max-w-2xl mx-auto">
-                Hello, my name is Borna, I am currently a student at University of California San Diego studying Mathematics Computer Science and am a aspiring full-stack developer. 
-                I love learning and expanding my knowledge in the computer science field and hope to learn a lot more to jumpstart my career.
+                Hello, my name is Borna, I am a UC San Diego Graduate in Mathematics - Computer Science. I specialize in backend software development as well as User Interactions in 3D space through Extended Reality. I aspire to continue pursueing and learning new ways to enhance with XR to be able to bring to the everyday user.
             </p>
 
             <p className="mt-10 max-w-2xl font-bold mx-auto">Here are a few of my skills I have learned along the way</p>

@@ -17,7 +17,7 @@
     },
     {
         "id": 5,
-        "skill": "LaTeX"
+        "skill": "XR Development"
     },
     {
         "id": 6,
@@ -29,15 +29,15 @@
     },
     {
         "id": 8,
-        "skill": "TypeScript"
+        "skill": "Machine Learning"
     },
     {
         "id": 9,
-        "skill": "R"
+        "skill": "Unity"
     },
     {
         "id": 10,
-        "skill": "Haskle"
+        "skill": "3D User Interface Design"
     },
     {
         "id": 11,
@@ -49,6 +49,6 @@
     },
     {
         "id": 13,
-        "skill": "Tailwind Css"
+        "skill": "Tailwind CSS"
     }
 ]

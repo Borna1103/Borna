@@ -1,6 +1,30 @@
 [
     {
         "id" : 1,
+        "name": "Simulife: Emergent AI NPC Societies in Simulated Public Spaces",
+        "about": "Presenting at AWE-XR USA 2025 in Long Beach with 5000+ attendees. This project explores the use of AI to create emergent societies of NPCs in virtual public spaces. The goal is to enhance the realism and interactivity of virtual environments by simulating complex social behaviors within groups of multiple AI.",
+        "time": "May 2025 - June 2025",
+        "tools": "Unity, Meta Quest All-in-One, C#, Gemini AI, Mixamo",
+        "link": "https://github.com/CSE-165/FinalProject"
+    },
+    {
+        "id" : 2,
+        "name": "Comic-Con Goblin Gunsmith",
+        "about": "Hired by MaverIc Studios to develop an arcade first person shooter game for Comic-Con 2025 San Diego. The game features a augmented reality game where players will have to pick up a dungeons and dragons themed weapon and shoot enemies to gain a high score",
+        "time": "April 2025 - July 2025",
+        "tools": "Unity, C#, Blender",
+        "link": "https://www.canva.com/design/DAGmteZTs7U/_X7BL6oEJ_RStYFl5HRUbA/edit?utm_content=DAGmteZTs7U&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+    },
+    {
+        "id" : 3,
+        "name": "Bomberman In VRChat",
+        "about": "Developed a multiplayer VR game in VRChat using UdonSharp, allowing players to engage in classic Bomberman gameplay in a virtual 3D environment.",
+        "time": "January 2024 - December 2024",
+        "tools": "UdonSharp, VRChat SDK, Unity",
+        "link": "https://vrchat.com/home/launch?worldId=wrld_fb8619b2-1653-4662-b52a-aeb39eec3b22"
+    },
+    {
+        "id" : 4,
         "name": "PantryPal",
         "about": "Developed an online recipe book application with a team that takes in voice input to generate recipes to then store for later use",
         "time": "September 2023 - December 2023",
@@ -9,7 +33,7 @@
     },
 
     {
-        "id" : 2,
+        "id" : 5,
         "name": "Fortune Hut Web App",
         "about": "Worked to improve an existing app by adding online funcitonality and a better developer experience with documentation, testing, and applying a refactor to split the backend and frontend of the code base with a MVC pattern",
         "time": "September 2023 - December 2023",
@@ -18,7 +42,7 @@
     },
 
     {
-        "id" : 3,
+        "id" : 6,
         "name": "Huffman Tree Encoding and Decoding",
         "about": "Exploring how to encrypt and decrypt data from Cse 100 at UCSD which focuses on Data Structures. Final Project in making a Huffman Tree to Encode a text file into binary and decode back into the original message.",
         "time": "Febuary 2023",
@@ -27,7 +51,7 @@
     },
 
     {
-        "id" : 4,
+        "id" : 7,
         "name": "2D-Portfolio",
         "about": "Created a mario-like web browser game used to showcase as a portfolio using kaboom.js a javascript library, sprites and vanilla html/css",
         "time": "July 2024 - Present",
@@ -36,7 +60,7 @@
     },
 
     {
-        "id" : 5,
+        "id" : 8,
         "name": "Capstone Project",
         "about": "Team capstone project creating a wireless USB hub with a Raspberry pi zero along with outer shell modeled in blender. Researched logistics to create a power efficient USB hub and personally worked with the physical model, modeling of the shell and research of software and hardware.",
         "time": "September 2019 - June 2019",
@@ -45,7 +69,7 @@
     },
 
     {
-        "id" : 6,
+        "id" : 9,
         "name": "UCSD Climable Trees",
         "about": "Over the summer project to create a website that showcases all climable trees at UCSD and their difficulty",
         "time": "July 2024 - Present",

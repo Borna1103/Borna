@@ -7,7 +7,7 @@ export default function Footer() {
                     <a href="https://borna1103.github.io/Borna/" className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
                         <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">Borna Hemmaty</span>
                     </a>
-                    <ul className="flex flex-wrap items-center mb-6 text-sm font-medium  sm:mb-0 text-gray-400">
+                    <ul className="flex flex-wrap items-center mb-6 text-sm font-medium  sm:mb-0 text-gray-400 cursor-pointer">
                         <li>
                             <ScrollLink className="hover:underline me-4 md:me-6" to='home' smooth={true} duration={500}>Home</ScrollLink> 
                         </li>
@@ -18,7 +18,7 @@ export default function Footer() {
                             <ScrollLink className="hover:underline me-4 md:me-6" to='projects' smooth={true} duration={500}>Projects</ScrollLink>
                         </li>
                         <li>
-                            <a  className="hover:underline">Contact</a>
+                            <a className="hover:underline" href='mailto:hemmatyborna@gmail.com'>Contact</a>
                         </li>
                     </ul>
                 </div>
