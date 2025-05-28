@@ -2,7 +2,7 @@ import data from '../data/projects.json';
 
 export default function Projects() {
     return (
-        <div className='rounded-2xl borderp-6 border-zinc-100 border-zinc-700/40 bg-gray-800 overflow-y-auto no-scrollbar project'>
+        <div className='rounded-2xl borderp-6 border-zinc-100 m-5 sm:m-0 border-zinc-700/40 bg-gray-800 overflow-y-auto no-scrollbar project'>
             <h2 className="flex text-base font-semibold tracking-tight text-white pt-5 pl-8 pb-5">
                 <svg viewBox="0 0 24 24" fill="none" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="h-6 w-6 flex-none">
                     <path d="M2.75 9.75a3 3 0 0 1 3-3h12.5a3 3 0 0 1 3 3v8.5a3 3 0 0 1-3 3H5.75a3 3 0 0 1-3-3v-8.5Z" className=" fill-zinc-100/10 stroke-zinc-500"></path>

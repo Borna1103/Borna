@@ -12,7 +12,7 @@ export default function About(){
             
             <div className="mt-5 mx-auto wrap overflow-hidden">
                 {data.map((skill) => (
-                    <span className="hover:text-teal-200 font-semibold cursor-default relative text-xl mx-4" key={skill.id}>{skill.skill}</span>
+                    <span className="hover:text-teal-200 font-semibold cursor-default relative sm:text-xl text-base mx-4" key={skill.id}>{skill.skill}</span>
                 ))}
             </div>
 
