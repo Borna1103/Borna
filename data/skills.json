@@ -50,5 +50,9 @@
     {
         "id": 13,
         "skill": "Tailwind CSS"
+    },
+    {
+        "id": 14,
+        "skill": ".Net Core / ASP.NET"
     }
 ]
