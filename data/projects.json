@@ -26,11 +26,11 @@
     },
     {
         "id" : 4,
-        "name": "Bomberman In VRChat",
-        "about": "Developed a multiplayer VR game in VRChat using UdonSharp, allowing players to engage in classic Bomberman gameplay in a virtual 3D environment.",
-        "time": "January 2024 - December 2024",
-        "tools": "UdonSharp, VRChat SDK, Unity",
-        "link": "https://vrchat.com/home/launch?worldId=wrld_fb8619b2-1653-4662-b52a-aeb39eec3b22"
+        "name": "2D-Portfolio",
+        "about": "Created a mario-like web browser game used to showcase as a portfolio using kaboom.js a javascript library, sprites and vanilla html/css",
+        "time": "January 2026",
+        "tools": "Kaboom.js, vite, HTML, CSS, Tiled, Javascript",
+        "link": "https://borna1103.github.io/2D-Portfolio/"
     },
     {
         "id" : 5,
@@ -61,11 +61,11 @@
 
     {
         "id" : 8,
-        "name": "2D-Portfolio",
-        "about": "Created a mario-like web browser game used to showcase as a portfolio using kaboom.js a javascript library, sprites and vanilla html/css",
-        "time": "July 2024 - Present",
-        "tools": "Kaboom.js, vite, HTML, CSS, Tiled, Javascript",
-        "link": "https://borna1103.github.io/2D-Portfolio/"
+        "name": "Bomberman In VRChat",
+        "about": "Developed a multiplayer VR game in VRChat using UdonSharp, allowing players to engage in classic Bomberman gameplay in a virtual 3D environment.",
+        "time": "January 2024 - December 2024",
+        "tools": "UdonSharp, VRChat SDK, Unity",
+        "link": "https://vrchat.com/home/launch?worldId=wrld_fb8619b2-1653-4662-b52a-aeb39eec3b22"
     },
 
     {
